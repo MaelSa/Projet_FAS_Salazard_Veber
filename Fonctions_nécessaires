@@ -1,0 +1,11 @@
+Fonctions :
+Lire_bouton() #Permet de lire l'état d'un bouton
+Afficher(string) #Affiche une chaîne de caractère sur l'écran LCD
+Lire_intensité() #Lit l'intensité du potentiomètre
+Emettre(son) #
+Allumer_Led(couleur)
+Eteindre_Led(couleur)
+Lire_QRcode(image)
+Analyse_réponse(bouton,potentiomètre)
+Envoyer_son_jack(fichier_audio
+main()
