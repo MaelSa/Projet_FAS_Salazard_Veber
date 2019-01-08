@@ -5,7 +5,7 @@ import time
 ##### ACTION : Surveille les entrées #####
 
 def action(temps,nbrOption=0,ignorer=[False,False]):
-'''
+    '''
 Données :
     temps (int>0) détermine combien de temps les boutons/potentiomètre sont surveillés
 
@@ -15,11 +15,11 @@ Données :
 
 Résultat :
     Lorsque l'utilisateur agit sur un bouton/potentiomètre actif, alors la fonction prend fin et renvoie des informations sur l'action
-'''
+    '''
 
     ### Initialisation
     # Potentiomètre    
-    posStart=analogRead(0)
+    posStart = analogRead(0)
     mvtPosition=0
     # Boutons
     bouton1=False
