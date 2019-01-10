@@ -33,10 +33,11 @@ class QuestionsINT:
         pos_start = grovepi.analogRead(0)
         range = self.range_end - self.range_start
         increment = range/255
-        int_shown = self.range_start + (pos_start * range) 
+        int_shown = self.range_start + (pos_start * range)
         while not answer_given: #On continue tant qu'une réponse n'a pas été donnée
             posCourante=grovepi.analogRead(0))
             answer_given = bool(grovepi.digital.read(3))
+            #faut calculer le décalage, incrementer ... modifier la pos, mais la laisser en pos courante si on modifie pas (à réfléchir still)
 
 
 class QuestionAssist:
@@ -46,3 +47,10 @@ class QuestionAssist:
         self.code_right = code_right
         self.code_false = code_false
         self.color = color
+
+    def answer_choice(self):
+        answer_given = False
+        while not answer_given:
+            number_shown = grovepi.analogRead(0)
+            answer_given = bool(grovepi.digital.read(3))
+        return number_shown
