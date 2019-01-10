@@ -1,4 +1,6 @@
-
+import time
+import grovepi
+import sys
 
 #Classe permettant de gérer les options (dans les menus)
 class Option:
@@ -24,11 +26,18 @@ class QuestionsINT:
         self.name = name #La chaîne de caractères correspondant à la question
         self.answer = answer #L'entier attendu en réponse
         self.range_start = range_start
-        self.range_end = range_ende
+        self.range_end = range_end
     def answer_choice(self):
         """lit en continu les réponses"""
-        posCourante=grovepi.analogRead(0)
-        grovepi.digital.read(3)
+        answer_given = False
+        pos_start = grovepi.analogRead(0)
+        range = self.range_end - self.range_start
+        increment = range/255
+        int_shown = self.range_start + (pos_start * range) 
+        while not answer_given: #On continue tant qu'une réponse n'a pas été donnée
+            posCourante=grovepi.analogRead(0))
+            answer_given = bool(grovepi.digital.read(3))
+
 
 class QuestionAssist:
     """Classe assistée par quelqu'un (nous ou un bénévole), il faut écrire un code pour que la réponse soit juste, il y a aussi un code pour indiquer que la réponse est fausse"""
