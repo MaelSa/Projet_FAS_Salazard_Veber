@@ -27,6 +27,8 @@ class QuestionsINT:
         self.range_end = range_ende
     def answer_choice(self):
         """lit en continu les réponses"""
+        posCourante=grovepi.analogRead(0)
+        grovepi.digital.read(3)
 
 class QuestionAssist:
     """Classe assistée par quelqu'un (nous ou un bénévole), il faut écrire un code pour que la réponse soit juste, il y a aussi un code pour indiquer que la réponse est fausse"""
