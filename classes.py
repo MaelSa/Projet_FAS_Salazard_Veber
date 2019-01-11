@@ -37,6 +37,7 @@ class QuestionsINT:
         while not answer_given: #On continue tant qu'une réponse n'a pas été donnée
             posCourante=grovepi.analogRead(0))
             answer_given = bool(grovepi.digital.read(3))
+            #à faire à tête reposé, tranquille
             #faut calculer le décalage, incrementer ... modifier la pos, mais la laisser en pos courante si on modifie pas (à réfléchir still)
 
 
@@ -49,8 +50,19 @@ class QuestionAssist:
         self.color = color
 
     def answer_choice(self):
+        """affiche des nombres à l'écran, qu'on change en tournant le potentiomètre, on appuie pour valider la réponse, retourne le nombre affiché à l'écran au moment de l'appui du bouton"""
         answer_given = False
         while not answer_given:
             number_shown = grovepi.analogRead(0)
             answer_given = bool(grovepi.digital.read(3))
         return number_shown
+
+    def check_answer(self, number):
+        """vérifie si la réponse donnée est juste ou fausse"""
+
+        while answer_given != self.code_false and answer_given != self.code_right: #On boucle tant que le code donné ne correspond pas à la réponse juste ou la réponse fausse (on fait cela pour éviter les erreurs possibles sur les entrées)
+            answer_given = self.answer_choice
+        if answer_given == self.code_false:
+            return False
+        else:
+            return True
