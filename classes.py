@@ -14,7 +14,7 @@ class Option:
 class QuestionQCM:
     """Classe pour programmer des questions avec une réponse de type QCM"""
     def __init__(self, options, answer):
-        """options : array of options, answer : option"""
+        """options : array of options, answuer : option"""
         self.options = options #(Liste) Les différentes options du QCM (ces objets sont donc des instances de la classe option)
         self.answer = answer #(Entier) entier correspondant à l'indice de la réponse dans la liste des options
 
