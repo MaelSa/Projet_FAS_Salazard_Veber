@@ -18,6 +18,10 @@ class QuestionQCM:
         self.options = options #(Liste) Les différentes options du QCM (ces objets sont donc des instances de la classe option)
         self.answer = answer #(Entier) entier correspondant à l'indice de la réponse dans la liste des options
 
+    def answer_choice(self):
+        """laisse tourner le menu tant qu'une option n'a pas été selectionnée"""
+        #On utilise simplemen l'option menu, qui nous renvoie l'option selectionnée en passant la liste des opions en paramètre
+        #return un bool si la réponse est juste ou fausse
 
 class QuestionsINT:
     """Classe pour programmer des questions qui attendent comme réponse un entier"""
@@ -27,6 +31,7 @@ class QuestionsINT:
         self.answer = answer #L'entier attendu en réponse
         self.range_start = range_start
         self.range_end = range_end
+
     def answer_choice(self):
         """lit en continu les réponses"""
         answer_given = False
@@ -39,7 +44,7 @@ class QuestionsINT:
             answer_given = bool(grovepi.digital.read(3))
             #à faire à tête reposé, tranquille
             #faut calculer le décalage, incrementer ... modifier la pos, mais la laisser en pos courante si on modifie pas (à réfléchir still)
-
+        # On return un bool, correspondant à la justesse de la réponse
 
 class QuestionAssist:
     """Classe assistée par quelqu'un (nous ou un bénévole), il faut écrire un code pour que la réponse soit juste, il y a aussi un code pour indiquer que la réponse est fausse"""
