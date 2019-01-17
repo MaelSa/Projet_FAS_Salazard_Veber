@@ -2,15 +2,6 @@ import time
 import grovepi
 import sys
 
-#Classe permettant de gérer les options (dans les menus)
-class Option:
-    def __init__(self, name, color, sound):
-        """name : string, color : tuple 3 elements, sound : string"""
-        self.name = name #(String) le nom de l'option
-        self.color = color #(tuple) Couleur des backlight de l'écran lorsque l'option est en sélection
-        self.sound = sound #(string) Chemin vers le son à jouer lors de l'option (peut être None)
-
-
 class QuestionQCM:
     """Classe pour programmer des questions avec une réponse de type QCM"""
     def __init__(self, options, answer):
