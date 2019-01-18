@@ -10,7 +10,7 @@ while not fin_de_programme:
     Option_choisie = menu_options([Mode_1_joueur, Mode_2_joueurs])
 
 
-    if Option_choisie == 1:#On lance le mode 1 joueur
+    if Option_choisie == 0:#On lance le mode 1 joueur
         changer_mode = False
         while not changer_mode:
             choix_quiz1 = Option("Quiz1",[255,0,0], "")
