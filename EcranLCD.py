@@ -131,6 +131,7 @@ def menu_options(Options):
 	#quit = False
 	#Options = [option1,option2,option3]
 	num_current_option = analogRead(0)//len(Options)
+    quit = False
 	if num_current_option > len(Options) - 1:
 		num_current_option = len(Options) - 1
 	while not quit:
