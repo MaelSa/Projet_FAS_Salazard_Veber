@@ -12,6 +12,7 @@ class Quiz:
 
         for i in self.questions:
             answer = False
+            print("ON EXECTUTE LE QUIZZ")
             answer = i.executer_question()
             if i.answer:
                 score += 1
