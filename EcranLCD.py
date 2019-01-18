@@ -18,7 +18,7 @@ def action(temps,nbrOption=0,ignorer=[False,False]):
 #'''
 
     ### Initialisation
-    # Potentiomètre    
+    # Potentiomètre
     posStart=analogRead(0)
     mvtPosition=0
     # Boutons
@@ -28,17 +28,17 @@ def action(temps,nbrOption=0,ignorer=[False,False]):
     tStart=time.time()
     tCourant=time.time()
 
-    ### Test jusqu'à temps écoulé ou action détectée    
+    ### Test jusqu'à temps écoulé ou action détectée
     while (tCourant < tStart+temps) and (mvtPosition == 0) and not bouton1 and not bouton2:
         # Potentiomètre
         if nbrOption > 0:
             posCourante=analogRead(0)
-            	   
+
             if posCourante-posStart > 1024//(nbrOption+2):
                 mvtPosition=1
-                
+
             elif posStart-posCourante >1024//(nbrOption+2):
-                mvtPosition=-1        
+                mvtPosition=-1
         # Bouton 1
         if not ignorer[0] and (digitalRead(3)==1):
             bouton1=True
@@ -52,7 +52,7 @@ def action(temps,nbrOption=0,ignorer=[False,False]):
     return mvtPosition,bouton1,bouton2
 
 
-  
+
 ##### AFFICHER : Print sur écran #####
 
 def afficherLCD(text,rgb=[0,255,0],nbrOption=0,ignorer=[False,False]):
@@ -104,7 +104,7 @@ def afficherLCD(text,rgb=[0,255,0],nbrOption=0,ignorer=[False,False]):
                 nbrLigne=nbrLigne+(reste+decalage)//16
                 reste=(reste+decalage)%16
         i+=1
-                
+
 
     ### Affiche le texte et fait défiler si nécessaire jusqu'à ce que l'utilisateur agisse
     pot,bouton1,bouton2=0,False,False
@@ -112,13 +112,37 @@ def afficherLCD(text,rgb=[0,255,0],nbrOption=0,ignorer=[False,False]):
     while not pot and not bouton1 and not bouton2:
         i=0 # Itérateur de ligne
         while i<nbrLigne and not pot and not bouton1 and not bouton2:
-            lignes=text[i*16:(i+2)*16] # Caractères 0 à 31 etc             
+            lignes=text[i*16:(i+2)*16] # Caractères 0 à 31 etc
             setText(lignes)
             i+=1
             pot,bouton1,bouton2=action(2,nbrOption,ignorer)
 
     return pot,bouton1,bouton2
 
+#Fonction permettant d'afficher un menu composé des options dans la liste d'options donnée en argument
+def menu_options(Options):
+
+	#color1 = [255,0,0]
+	#color2 = [0,255,0]
+	#color3 = [0,0,255]
+	#option1 = Option("J aime", color1, 0)
+	#option2 = Option("Les", color2,0)
+	#option3 = Option("musees", color3, 0)
+	#quit = False
+	#Options = [option1,option2,option3]
+	num_current_option = analogRead(0)//len(Options)
+	if num_current_option > len(Options) - 1:
+		num_current_option = len(Options) - 1
+	while not quit:
+		action_potentiometre, action_bouton1, action_bouton2 = afficherLCD(Options[num_current_option].name,Options[num_current_option].color,len(Options))
+		print(action_potentiometre)
+		if action_potentiometre == 1 and num_current_option != len(Options) - 1:
+			num_current_option += 1
+		elif action_potentiometre == -1 and num_current_option != 0:
+		num_current_option -= 1
+		elif action_bouton1:
+			quit = True
+	return num_current_option
 
 ########## TESTS ##########
 
