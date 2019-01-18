@@ -9,7 +9,7 @@ class Quiz:
         self.end_text = end_text
         self.code = code
     def executer_quiz(self):
-
+        score = 0
         for i in self.questions:
             answer = False
             print("ON EXECTUTE LE QUIZZ")
