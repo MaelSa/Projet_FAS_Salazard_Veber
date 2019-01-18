@@ -34,7 +34,7 @@ class QuestionsINT:
         if num_print > self.range_end:
             num_print = self.range_end
         while not quit:
-            action_potentiometre, action_bouton1, action_bouton2 = afficherLCD(str(num_print),num_print.color,self.range)
+            action_potentiometre, action_bouton1, action_bouton2 = afficherLCD(str(num_print),[0,255,0],self.range)
             print(action_potentiometre)
             if action_potentiometre == 1 and num_print != self.range - 1:
                 num_print += 1
