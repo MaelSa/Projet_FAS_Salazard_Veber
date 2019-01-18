@@ -60,7 +60,7 @@ class QuestionAssist:
             num_print = 10
         quit = False
         while not quit:
-            action_potentiometre, action_bouton1, action_bouton2 = afficherLCD(str(num_print),num_print.color,10)
+            action_potentiometre, action_bouton1, action_bouton2 = afficherLCD(str(num_print),[255,1,1],10)
             print(action_potentiometre)
             if action_potentiometre == 1 and num_print != self.range - 1:
                 num_print += 1
