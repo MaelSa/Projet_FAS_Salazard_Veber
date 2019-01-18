@@ -16,6 +16,7 @@ class QuestionQCM:
         #return un bool si la réponse est juste ou fausse
         answer = menu_options(self.options)
         return answer == self.answer
+
 class QuestionsINT:
     """Classe pour programmer des questions qui attendent comme réponse un entier"""
     def __init__(self, name, answer, range_start, range_end):
@@ -25,21 +26,23 @@ class QuestionsINT:
         self.range_start = range_start
         self.range_end = range_end
         self.range = range_end - range_start
+
     def executer_question(self):
-        """lit en continu les réponses"""
+        #"""lit en continu les réponses"""
         num_print = analogRead(0)//self.range
+        quit = False
     	if num_print > self.range_end:
-    		num_print = self.range_end
-    		while not quit:
-    			action_potentiometre, action_bouton1, action_bouton2 = afficherLCD(str(num_print),num_print.color,self.range)
-    			print(action_potentiometre)
-    			if action_potentiometre == 1 and num_print != self.range - 1:
-    				num_print += 1
-    			elif action_potentiometre == -1 and num_print != 0:
-    			    num_print -= 1
-    			elif action_bouton1:
-    				quit = True
-                    return num_print == self.answer
+    	    num_print = self.range_end
+    	while not quit:
+    	    action_potentiometre, action_bouton1, action_bouton2 = afficherLCD(str(num_print),num_print.color,self.range)
+    	    print(action_potentiometre)
+    	    if action_potentiometre == 1 and num_print != self.range - 1:
+    		num_print += 1
+    	    elif action_potentiometre == -1 and num_print != 0:
+    		num_print -= 1
+    	    elif action_bouton1:
+    		quit = True
+            return num_print == self.answer
 
 
 class QuestionAssist:
