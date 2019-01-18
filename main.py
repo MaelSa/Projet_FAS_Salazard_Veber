@@ -19,6 +19,6 @@ while not fin_de_programme:
             if quiz_choisi == 1:
                 score = quiz1.executer_quiz()
                 print(score)
-            elif quiz_choisi == 2:
+            #elif quiz_choisi == 2:
 
-    #else:#On lance le mode 2 joueurs
+#else:#On lance le mode 2 joueurs
