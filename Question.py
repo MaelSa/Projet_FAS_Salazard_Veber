@@ -1,7 +1,6 @@
 import time
 from grovepi import *
 import sys
-from menu_test import *
 from EcranLCD import *
 
 class QuestionQCM:
