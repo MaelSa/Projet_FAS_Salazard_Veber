@@ -17,6 +17,7 @@ while not fin_de_programme:
             choix_quiz2 = Option("Quiz2",[0,255,0], "")
             choix_quiz3 = Option("Quiz3",[0,0,255], "")
             quiz_choisi = menu_options([choix_quiz1,choix_quiz2,choix_quiz3])
+
             if quiz_choisi == 1:
                 score = quiz1.executer_quiz()
                 print(score)
