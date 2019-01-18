@@ -71,7 +71,7 @@ class QuestionAssist:
 
     def executer_question(self):
         """vérifie si la réponse donnée est juste ou fausse"""
-
+        answer_giver = False
         while answer_given != self.code_false and answer_given != self.code_right: #On boucle tant que le code donné ne correspond pas à la réponse juste ou la réponse fausse (on fait cela pour éviter les erreurs possibles sur les entrées)
             answer_given = self.answer_choice()
         if answer_given == self.code_false:
