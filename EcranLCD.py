@@ -54,19 +54,19 @@ Résultat :
 ##### AFFICHER : Print sur écran #####
 
 def afficherLCD(text,rgb=[0,255,0],nbrOption=0,ignorer=[False,False]):
-"""
-Données :
-    text (Chaine de caractères) que l'on souhaite afficher sur lécran lcd
+    """
+    Données :
+        text (Chaine de caractères) que l'on souhaite afficher sur lécran lcd
 
-        Options :
-    rgb (Liste de int E {0;255}) pour définir la couleur de fond d'écran
-        Spécifique à action :
-    nbrOption (int>=0) pour le menu déroulant, si 0 alors pas de menu déroulant donc potentiomètre inactif
-    ignorer (Liste de bool) pour rendre les boutons inactifs
+            Options :
+            rgb (Liste de int E {0;255}) pour définir la couleur de fond d'écran
+            Spécifique à action :
+            nbrOption (int>=0) pour le menu déroulant, si 0 alors pas de menu déroulant donc potentiomètre inactif
+            ignorer (Liste de bool) pour rendre les boutons inactifs
 
-Résultat :
-    Affiche le texte sur l'écran LCD
-    Lorsque l'utilisateur agit sur un bouton/potentiomètre actif, alors la fonction prend fin et renvoie des informations sur l'action"""
+        Résultat :
+        Affiche le texte sur l'écran LCD
+        Lorsque l'utilisateur agit sur un bouton/potentiomètre actif, alors la fonction prend fin et renvoie des informations sur l'action"""
 
     ### Initialise la couleur de fond
     setRGB(rgb[0],rgb[1],rgb[2])
