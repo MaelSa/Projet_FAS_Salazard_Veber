@@ -1,5 +1,5 @@
 from test_lcd import *
-from EcranLCD import *
+#from EcranLCD import *
 from Options import *
 from Fonctions import *
 from LCD import *
