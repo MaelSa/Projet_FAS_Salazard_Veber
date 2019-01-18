@@ -31,18 +31,18 @@ class QuestionsINT:
         #"""lit en continu les réponses"""
         num_print = analogRead(0)//self.range
         quit = False
-    	if num_print > self.range_end:
-    	    num_print = self.range_end
-    	while not quit:
-    	    action_potentiometre, action_bouton1, action_bouton2 = afficherLCD(str(num_print),num_print.color,self.range)
-    	    print(action_potentiometre)
-    	    if action_potentiometre == 1 and num_print != self.range - 1:
-    		num_print += 1
-    	    elif action_potentiometre == -1 and num_print != 0:
-    		num_print -= 1
-    	    elif action_bouton1:
-    		quit = True
-            return num_print == self.answer
+        if num_print > self.range_end:
+            num_print = self.range_end
+        while not quit:
+            action_potentiometre, action_bouton1, action_bouton2 = afficherLCD(str(num_print),num_print.color,self.range)
+            print(action_potentiometre)
+            if action_potentiometre == 1 and num_print != self.range - 1:
+                num_print += 1
+            elif action_potentiometre == -1 and num_print != 0:
+                num_print -= 1
+            elif action_bouton1:
+                quit = True
+        return num_print == self.answer
 
 
 class QuestionAssist:
@@ -56,18 +56,18 @@ class QuestionAssist:
     def answer_choice(self):
         """affiche des nombres à l'écran, qu'on change en tournant le potentiomètre, on appuie pour valider la réponse, retourne le nombre affiché à l'écran au moment de l'appui du bouton"""
         num_print = analogRead(0)//10
-    	if num_print > 10:
-    		num_print = 10
-    		while not quit:
-    			action_potentiometre, action_bouton1, action_bouton2 = afficherLCD(str(num_print),num_print.color,10)
-    			print(action_potentiometre)
-    			if action_potentiometre == 1 and num_print != self.range - 1:
-    				num_print += 1
-    			elif action_potentiometre == -1 and num_print != 0:
-    			    num_print -= 1
-    			elif action_bouton1:
-    				quit = True
-                    return num_print
+        if num_print > 10:
+            num_print = 10
+        while not quit:
+            action_potentiometre, action_bouton1, action_bouton2 = afficherLCD(str(num_print),num_print.color,10)
+            print(action_potentiometre)
+            if action_potentiometre == 1 and num_print != self.range - 1:
+                num_print += 1
+            elif action_potentiometre == -1 and num_print != 0:
+                num_print -= 1
+            elif action_bouton1:
+                quit = True
+                return num_print
 
     def executer_question(self, number):
         """vérifie si la réponse donnée est juste ou fausse"""
