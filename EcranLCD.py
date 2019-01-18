@@ -1,6 +1,6 @@
 from grovepi import *
 import time
-from test_lcd import *
+from Fonctions_lcd import *
 
 ##### ACTION : Surveille les entrées #####
 
