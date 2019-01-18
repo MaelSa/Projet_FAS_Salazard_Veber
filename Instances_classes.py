@@ -24,8 +24,6 @@ Question_8 = QuestionAssist("Trouver la lance/marteau",(0,0,0),0,0)
 
 #Fichier regroupant la liste des questions)
 #La numérotation des questions correspond à la numérotation des oeuvres
-from classes import *
-from Options_questions import *
 
 
 Question_1 = QuestionAssist("Trouver le serpent",(0,0,0),0,0)
