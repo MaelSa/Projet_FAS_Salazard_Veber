@@ -14,7 +14,7 @@ class Quiz:
             answer = False
             print("ON EXECTUTE LE QUIZZ")
             answer = i.executer_question()
-            if i.answer:
+            if answer:
                 score += 1
 
         return score
