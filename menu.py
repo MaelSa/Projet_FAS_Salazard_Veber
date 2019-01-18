@@ -27,4 +27,5 @@ def menu_options(Options):
 			num_current_option -= 1
 		elif action_bouton1:
 			quit = True
+	print("on return",num_current_option + 1)
 	return num_current_option + 1
