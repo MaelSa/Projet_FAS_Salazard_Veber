@@ -29,11 +29,11 @@ def setRGB(r,g,b):
     bus.write_byte_data(DISPLAY_RGB_ADDR,3,g)
     bus.write_byte_data(DISPLAY_RGB_ADDR,2,b)
 
-# send command to display (no need for external use)    
+# send command to display (no need for external use)
 def textCommand(cmd):
     bus.write_byte_data(DISPLAY_TEXT_ADDR,0x80,cmd)
 
-# set display text \n for second line(or auto wrap)     
+# set display text \n for second line(or auto wrap)
 def setText(text):
     textCommand(0x01) # clear display
     time.sleep(.05)
@@ -79,7 +79,7 @@ def setText_norefresh(text):
 
 ##### FONCTION NOUVELLE #####
 def action(temps,nbrOption=1):
-    # Potentiomètre    
+    # Potentiomètre
     posStart=grovepi.analogRead(0)
     mvtPosition=0
     # Boutons
@@ -88,7 +88,7 @@ def action(temps,nbrOption=1):
     # Temps
     tStart=time.time()
     tCourant=time.time()
-   
+
     while (tCourant < tStart+temps) and (mvtPosition == 0) and not bouton1 and not bouton2:
         # Potentiomètre
         posCourante=grovepi.analogRead(0)
@@ -99,15 +99,15 @@ def action(temps,nbrOption=1):
         # Bouton 1
         if grovepi.digitalRead(3)==1:
             bouton1=True
- 
+
 	# Bouton 2
         if grovepi.digitalRead(2)==1:
             bouton2=True
-        tCourant=time.time()   
+        tCourant=time.time()
     return mvtPosition,bouton1,bouton2
-    
 
-def afficherLCD(text,rgb=[0,255,0]):
+
+#def afficherLCD(text,rgb=[0,255,0]):
 #"""
 #Données :
 #    text (Chaine de caractères) que lon souhaite afficher sur lécran lcd
@@ -133,7 +133,7 @@ def afficherLCD(text,rgb=[0,255,0]):
 
 
     ### Affiche le texte et fait défiler si nécessaire jusqu'à ce que quelqu'un agisse
-    a = False	
+    a = False
     while not a:
                      # On évalue action mais pas la première fois -> Do...While
         i=0 # Itérateur de ligne
@@ -142,7 +142,7 @@ def afficherLCD(text,rgb=[0,255,0]):
             ligne1=text[i*16:(i+2)*16] # Caractères 0 à 31 etc
             if i==nbrLigne-1: # S'il n'y a pas de ligne i+2
                 ligne1=text[i*16:(i+1)*16+reste]
-	                   
+
             setText(ligne1)
             i+=1
             a,b,c = action(3)
