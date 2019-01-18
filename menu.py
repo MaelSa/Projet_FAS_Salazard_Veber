@@ -15,7 +15,7 @@ def menu_options(Options):
 	#quit = False
 	#Options = [option1,option2,option3]
 	num_current_option = analogRead(0)//len(Options)
-	if num_curret_option > len(Options) - 1:
+	if num_current_option > len(Options) - 1:
 		num_current_option = len(Options) - 1
 	while not quit:
 		action_potentiometre, action_bouton1, action_bouton2 = afficherLCD(Options[num_current_option].name,Options[num_current_option].color,3)
