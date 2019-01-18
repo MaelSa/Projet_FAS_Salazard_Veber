@@ -1,7 +1,7 @@
 from Fonctions_lcd import *
 from EcranLCD import *
 from Options import *
-from Fonctions import *
+from Fonctions_lcd import *
 
 
 def menu_options(Options):
