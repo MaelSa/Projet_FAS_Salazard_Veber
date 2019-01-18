@@ -2,7 +2,6 @@ from test_lcd import *
 from EcranLCD import *
 from Options import *
 from Fonctions import *
-from grovepi import *
 #from LCD import *
 color1 = [255,0,0]
 color2 = [0,255,0]

@@ -1,11 +1,11 @@
 from grovepi import *
 import time
-from LCD import *
+from test_lcd import *
 
 ##### ACTION : Surveille les entrées #####
 
 def action(temps,nbrOption=0,ignorer=[False,False]):
-#    '''
+#'''
 #Données :
 #    temps (int>0) détermine combien de temps les boutons/potentiomètre sont surveillés
 
@@ -15,11 +15,11 @@ def action(temps,nbrOption=0,ignorer=[False,False]):
 
 #Résultat :
 #    Lorsque l'utilisateur agit sur un bouton/potentiomètre actif, alors la fonction prend fin et renvoie des informations sur l'action
-#    '''
+#'''
 
     ### Initialisation
-    # Potentiomètre
-    posStart = analogRead(0)
+    # Potentiomètre    
+    posStart=analogRead(0)
     mvtPosition=0
     # Boutons
     bouton1=False
@@ -28,15 +28,17 @@ def action(temps,nbrOption=0,ignorer=[False,False]):
     tStart=time.time()
     tCourant=time.time()
 
-    ### Test jusqu'à temps écoulé ou action détectée
+    ### Test jusqu'à temps écoulé ou action détectée    
     while (tCourant < tStart+temps) and (mvtPosition == 0) and not bouton1 and not bouton2:
         # Potentiomètre
-        if nbrOption:
+        if nbrOption > 0:
             posCourante=analogRead(0)
-            if posCourante-posStart > 256//nbrOption:
-                mvtPostion=1
-            elif posStart-posCourante > 256//nbrOption:
-                mvtPosition=-1
+            	   
+            if posCourante-posStart > 1024//(nbrOption+2):
+                mvtPosition=1
+                
+            elif posStart-posCourante >1024//(nbrOption+2):
+                mvtPosition=-1        
         # Bouton 1
         if not ignorer[0] and (digitalRead(3)==1):
             bouton1=True
@@ -50,23 +52,24 @@ def action(temps,nbrOption=0,ignorer=[False,False]):
     return mvtPosition,bouton1,bouton2
 
 
-
+  
 ##### AFFICHER : Print sur écran #####
 
 def afficherLCD(text,rgb=[0,255,0],nbrOption=0,ignorer=[False,False]):
-#    """
-#    Données :
-#        text (Chaine de caractères) que l'on souhaite afficher sur lécran lcd
-#
-#            Options :
-#            rgb (Liste de int E {0;255}) pour définir la couleur de fond d'écran
-#            Spécifique à action :
-#            nbrOption (int>=0) pour le menu déroulant, si 0 alors pas de menu déroulant donc potentiomètre inactif
-#            ignorer (Liste de bool) pour rendre les boutons inactifs
+#"""
+#Données :
+#    text (Chaine de caractères) que l'on souhaite afficher sur lécran lcd
 
-#        Résultat :
-#        Affiche le texte sur l'écran LCD
-#        Lorsque l'utilisateur agit sur un bouton/potentiomètre actif, alors la fonction prend fin et renvoie des informations sur l'action"""
+#        Options :
+#    rgb (Liste de int E {0;255}) pour définir la couleur de fond d'écran
+#        Spécifique à action :
+#    nbrOption (int>=0) pour le menu déroulant, si 0 alors pas de menu déroulant donc potentiomètre inactif
+#    ignorer (Liste de bool) pour rendre les boutons inactifs
+
+#Résultat :
+#    Affiche le texte sur l'écran LCD
+#    Lorsque l'utilisateur agit sur un bouton/potentiomètre actif, alors la fonction prend fin et renvoie des informations sur l'action
+#"""
 
     ### Initialise la couleur de fond
     setRGB(rgb[0],rgb[1],rgb[2])
@@ -77,6 +80,7 @@ def afficherLCD(text,rgb=[0,255,0],nbrOption=0,ignorer=[False,False]):
 
     i=1 # Itérateur de ligne
     while i<nbrLigne:
+
 
         ## Si un mot est coupé en 2
         if (text[i*16-1] != " ") and (text[i*16-1] != ",") and (text[i*16-1] != "!") and (text[i*16-1] != "?") and (text[i*16-1] != ":") and (text[i*16] != " "):
@@ -100,7 +104,7 @@ def afficherLCD(text,rgb=[0,255,0],nbrOption=0,ignorer=[False,False]):
                 nbrLigne=nbrLigne+(reste+decalage)//16
                 reste=(reste+decalage)%16
         i+=1
-
+                
 
     ### Affiche le texte et fait défiler si nécessaire jusqu'à ce que l'utilisateur agisse
     pot,bouton1,bouton2=0,False,False
@@ -108,7 +112,7 @@ def afficherLCD(text,rgb=[0,255,0],nbrOption=0,ignorer=[False,False]):
     while not pot and not bouton1 and not bouton2:
         i=0 # Itérateur de ligne
         while i<nbrLigne and not pot and not bouton1 and not bouton2:
-            lignes=text[i*16:(i+2)*16] # Caractères 0 à 31 etc
+            lignes=text[i*16:(i+2)*16] # Caractères 0 à 31 etc             
             setText(lignes)
             i+=1
             pot,bouton1,bouton2=action(2,nbrOption,ignorer)
