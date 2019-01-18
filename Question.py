@@ -58,6 +58,7 @@ class QuestionAssist:
         num_print = analogRead(0)//10
         if num_print > 10:
             num_print = 10
+        quit = False
         while not quit:
             action_potentiometre, action_bouton1, action_bouton2 = afficherLCD(str(num_print),num_print.color,10)
             print(action_potentiometre)
