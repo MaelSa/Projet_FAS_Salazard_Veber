@@ -1,6 +1,6 @@
 from test_lcd import *
 from EcranLCD import *
-from classes import *
+#from classes import *
 from Fonctions import *
 color1 = [255,0,0]
 color2 = [0,255,0]
