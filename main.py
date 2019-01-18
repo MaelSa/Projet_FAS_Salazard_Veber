@@ -11,7 +11,7 @@ while not fin_de_programme:
 
     if Option_choisie == 1:#On lance le mode 1 joueur
         changer_mode = False
-        while not changer_mode
+        while not changer_mode:
             choix_quiz1 = Option("Quiz1",[0,0,0], "")
             choix_quiz2 = Option("Quiz2",[0,0,0], "")
             choix_quiz3 = Option("Quiz3",[0,0,0], "")
