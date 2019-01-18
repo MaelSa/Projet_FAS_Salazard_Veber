@@ -14,6 +14,7 @@ class Quiz:
             answer = False
             print("ON EXECTUTE LE QUIZZ")
             answer = i.executer_question()
+            print("réponse donnée",answer)
             if answer:
                 score += 1
 

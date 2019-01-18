@@ -26,7 +26,7 @@ Question_8 = QuestionAssist("Trouver la lance/marteau",(0,0,0),0,0)
 #La numérotation des questions correspond à la numérotation des oeuvres
 
 
-Question_1 = QuestionAssist("Trouver le serpent",(0,0,0),0,0)
+Question_1 = QuestionAssist("Trouver le serpent",(0,0,0),15,15)
 #Réponse : en or, en dessous du pot qui fume
 
 Question_3 = QuestionsINT("Combien de personnages", 15, 0, 40)
