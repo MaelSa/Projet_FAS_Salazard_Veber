@@ -52,7 +52,7 @@ class QuestionAssist:
         self.code_right = code_right
         self.code_false = code_false
         self.color = color
-
+        self.range = 10
     def answer_choice(self):
         """affiche des nombres à l'écran, qu'on change en tournant le potentiomètre, on appuie pour valider la réponse, retourne le nombre affiché à l'écran au moment de l'appui du bouton"""
         num_print = analogRead(0)//10
