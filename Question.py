@@ -10,7 +10,7 @@ class QuestionQCM:
         self.options = options #(Liste) Les différentes options du QCM (ces objets sont donc des instances de la classe option)
         self.answer = answer #(Entier) entier correspondant à l'indice de la réponse dans la liste des options
 
-    def answer_choice(self):
+    def executer_question(self):
         """laisse tourner le menu tant qu'une option n'a pas été selectionnée"""
         #On utilise simplemen l'option menu, qui nous renvoie l'option selectionnée en passant la liste des opions en paramètre
         #return un bool si la réponse est juste ou fausse
@@ -25,7 +25,7 @@ class QuestionsINT:
         self.range_start = range_start
         self.range_end = range_end
         self.range = range_end - range_start
-    def answer_choice(self):
+    def executer_question(self):
         """lit en continu les réponses"""
         num_print = analogRead(0)//self.range
     	if num_print > self.range_end:
@@ -66,7 +66,7 @@ class QuestionAssist:
     				quit = True
                     return num_print
 
-    def check_answer(self, number):
+    def executer_question(self, number):
         """vérifie si la réponse donnée est juste ou fausse"""
 
         while answer_given != self.code_false and answer_given != self.code_right: #On boucle tant que le code donné ne correspond pas à la réponse juste ou la réponse fausse (on fait cela pour éviter les erreurs possibles sur les entrées)

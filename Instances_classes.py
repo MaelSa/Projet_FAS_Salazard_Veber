@@ -1,7 +1,8 @@
 #Fichier regroupant les instances des classes options, questions et quizz#Fichier regroupant la liste des questions)
 #La numérotation des questions correspond à la numérotation des oeuvres
-from classes import *
-from Options_questions import *
+from Question import *
+from Options import *
+from Quiz import *
 
 
 Question_1 = QuestionAssist("Trouver le serpent",(0,0,0),0,0)
@@ -43,3 +44,7 @@ Question_8 = QuestionAssist("Trouver la lance/marteau",(0,0,0),0,0)
 #Question_12 =  QuestionQCM()
 
 #Question_13 = QuestionQCM()
+
+quiz1 = Quiz([Question_1, Question_3, Question_8],"Debut du quiz 1","fin du quiz 1",2)
+quiz2 = Quiz([Question_1, Question_3, Question_8],"Debut du quiz 1","fin du quiz 1",2)
+quiz3 = Quiz([Question_1, Question_3, Question_8],"Debut du quiz 1","fin du quiz 1",2)

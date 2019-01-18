@@ -1,7 +1,7 @@
 #Main projet FASO rallye musée
 from EcranLCD import *
 from Options import *
-
+from menu import *
 Mode_1_joueur = Option("Mode 1 joueur", [0,0,0], "")
 Mode_2_joueurs = Option("Mode 2 joueurs", [0,0,0], "")
 fin_de_programme = False
@@ -15,6 +15,10 @@ while not fin_de_programme:
             choix_quiz1 = Option("Quiz1",[0,0,0], "")
             choix_quiz2 = Option("Quiz2",[0,0,0], "")
             choix_quiz3 = Option("Quiz3",[0,0,0], "")
-            menu_options([choix_quiz1,choix_quiz2,choix_quiz3])
+            quiz_choisi = menu_options([choix_quiz1,choix_quiz2,choix_quiz3])
+            if quiz_choisi == 1:
+                score = quiz1.executer_quiz()
+                print(score)
+            elif quiz_choisi == 2:
 
     else:#On lance le mode 2 joueurs

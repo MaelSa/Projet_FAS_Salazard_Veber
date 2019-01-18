@@ -9,6 +9,11 @@ class Quiz:
         self.end_text = end_text
         self.code = code
     def executer_quiz(self):
+
         for i in self.questions:
+            answer = False
+            answer = i.executer_question()
             if i.answer:
                 score += 1
+
+        return score
