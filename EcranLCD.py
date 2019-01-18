@@ -18,7 +18,7 @@ Résultat :
     '''
 
     ### Initialisation
-    # Potentiomètre    
+    # Potentiomètre
     posStart = analogRead(0)
     mvtPosition=0
     # Boutons
@@ -28,7 +28,7 @@ Résultat :
     tStart=time.time()
     tCourant=time.time()
 
-    ### Test jusqu'à temps écoulé ou action détectée    
+    ### Test jusqu'à temps écoulé ou action détectée
     while (tCourant < tStart+temps) and (mvtPosition == 0) and not bouton1 and not bouton2:
         # Potentiomètre
         if nbrOption:
@@ -50,7 +50,7 @@ Résultat :
     return mvtPosition,bouton1,bouton2
 
 
-  
+
 ##### AFFICHER : Print sur écran #####
 
 def afficherLCD(text,rgb=[0,255,0],nbrOption=0,ignorer=[False,False]):
@@ -66,8 +66,7 @@ Données :
 
 Résultat :
     Affiche le texte sur l'écran LCD
-    Lorsque l'utilisateur agit sur un bouton/potentiomètre actif, alors la fonction prend fin et renvoie des informations sur l'action
-"""
+    Lorsque l'utilisateur agit sur un bouton/potentiomètre actif, alors la fonction prend fin et renvoie des informations sur l'action"""
 
     ### Initialise la couleur de fond
     setRGB(rgb[0],rgb[1],rgb[2])
@@ -101,7 +100,7 @@ Résultat :
                 nbrLigne=nbrLigne+(reste+decalage)//16
                 reste=(reste+decalage)%16
         i+=1
-                
+
 
     ### Affiche le texte et fait défiler si nécessaire jusqu'à ce que l'utilisateur agisse
     pot,bouton1,bouton2=0,False,False
@@ -109,7 +108,7 @@ Résultat :
     while not pot and not bouton1 and not bouton2:
         i=0 # Itérateur de ligne
         while i<nbrLigne and not pot and not bouton1 and not bouton2:
-            lignes=text[i*16:(i+2)*16] # Caractères 0 à 31 etc             
+            lignes=text[i*16:(i+2)*16] # Caractères 0 à 31 etc
             setText(lignes)
             i+=1
             pot,bouton1,bouton2=action(2,nbrOption,ignorer)
