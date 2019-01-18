@@ -23,7 +23,7 @@ def menu_options(Options):
 		if action_potentiometre == 1 and num_current_option != len(Options) - 1:
 			num_current_option += 1
 		elif action_potentiometre == -1 and num_current_option != 0:
-		num_current_option -= 1
+			num_current_option -= 1
 		elif action_bouton1:
 			quit = True
 	return num_current_option + 1
