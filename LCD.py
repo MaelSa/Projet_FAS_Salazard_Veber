@@ -106,8 +106,7 @@ def action(temps,nbrOption=1):
         tCourant=time.time()
     return mvtPosition,bouton1,bouton2
 
-
-#def afficherLCD(text,rgb=[0,255,0]):
+def afficherLCD(text,rgb=[0,255,0]):
 #"""
 #Données :
 #    text (Chaine de caractères) que lon souhaite afficher sur lécran lcd
@@ -126,9 +125,9 @@ def action(temps,nbrOption=1):
     nbrLigne=len(text)//16+1
 
     i=1
-#    while i<nbrLigne :
-#        if (text[i*16-1] != " ") and (text[i*16-1] != ",") and (text[i*16-1] != "!") and (text[i*16-1] != "?") and (text[i*16-1] != ":") and (text[i*16] != " "):
-#            while caractere != " "
+    while i<nbrLigne :
+        if (text[i*16-1] != " ") and (text[i*16-1] != ",") and (text[i*16-1] != "!") and (text[i*16-1] != "?") and (text[i*16-1] != ":") and (text[i*16] != " "):
+            while caractere != " "
 
 
 
