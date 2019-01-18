@@ -5,17 +5,17 @@ from LCD import *
 ##### ACTION : Surveille les entrées #####
 
 def action(temps,nbrOption=0,ignorer=[False,False]):
-    '''
-Données :
-    temps (int>0) détermine combien de temps les boutons/potentiomètre sont surveillés
+#    '''
+#Données :
+#    temps (int>0) détermine combien de temps les boutons/potentiomètre sont surveillés
 
-        Options :
-    nbrOption (int>=0) pour le menu déroulant, si 0 alors pas de menu déroulant donc potentiomètre inactif
-    ignorer (Liste de bool) pour rendre les boutons inactifs
+#        Options :
+#    nbrOption (int>=0) pour le menu déroulant, si 0 alors pas de menu déroulant donc potentiomètre inactif
+#    ignorer (Liste de bool) pour rendre les boutons inactifs
 
-Résultat :
-    Lorsque l'utilisateur agit sur un bouton/potentiomètre actif, alors la fonction prend fin et renvoie des informations sur l'action
-    '''
+#Résultat :
+#    Lorsque l'utilisateur agit sur un bouton/potentiomètre actif, alors la fonction prend fin et renvoie des informations sur l'action
+#    '''
 
     ### Initialisation
     # Potentiomètre
@@ -54,19 +54,19 @@ Résultat :
 ##### AFFICHER : Print sur écran #####
 
 def afficherLCD(text,rgb=[0,255,0],nbrOption=0,ignorer=[False,False]):
-    """
-    Données :
-        text (Chaine de caractères) que l'on souhaite afficher sur lécran lcd
+#    """
+#    Données :
+#        text (Chaine de caractères) que l'on souhaite afficher sur lécran lcd
+#
+#            Options :
+#            rgb (Liste de int E {0;255}) pour définir la couleur de fond d'écran
+#            Spécifique à action :
+#            nbrOption (int>=0) pour le menu déroulant, si 0 alors pas de menu déroulant donc potentiomètre inactif
+#            ignorer (Liste de bool) pour rendre les boutons inactifs
 
-            Options :
-            rgb (Liste de int E {0;255}) pour définir la couleur de fond d'écran
-            Spécifique à action :
-            nbrOption (int>=0) pour le menu déroulant, si 0 alors pas de menu déroulant donc potentiomètre inactif
-            ignorer (Liste de bool) pour rendre les boutons inactifs
-
-        Résultat :
-        Affiche le texte sur l'écran LCD
-        Lorsque l'utilisateur agit sur un bouton/potentiomètre actif, alors la fonction prend fin et renvoie des informations sur l'action"""
+#        Résultat :
+#        Affiche le texte sur l'écran LCD
+#        Lorsque l'utilisateur agit sur un bouton/potentiomètre actif, alors la fonction prend fin et renvoie des informations sur l'action"""
 
     ### Initialise la couleur de fond
     setRGB(rgb[0],rgb[1],rgb[2])
