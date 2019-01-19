@@ -6,14 +6,7 @@ from Fonctions_lcd import *
 
 def menu_options(Options):
 
-	#color1 = [255,0,0]
-	#color2 = [0,255,0]
-	#color3 = [0,0,255]
-	#option1 = Option("J aime", color1, 0)
-	#option2 = Option("Les", color2,0)
-	#option3 = Option("musees", color3, 0)
-	#quit = False
-	#Options = [option1,option2,option3]
+
 	num_current_option = analogRead(0)//len(Options)
 	if num_current_option > len(Options) - 1:
 		num_current_option = len(Options) - 1
@@ -27,5 +20,5 @@ def menu_options(Options):
 			num_current_option -= 1
 		elif action_bouton1:
 			quit = True
-	print("on return",num_current_option + 1)
-	return num_current_option + 1
+	print("on return", num_current_option + 1)
+	return num_current_option

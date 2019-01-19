@@ -56,8 +56,8 @@ def action(temps,nbrOption=0,ignorer=[False,False]):
 ##### AFFICHER : Print sur écran #####
 
 def afficherLCD(text,rgb=[0,255,0],nbrOption=0,ignorer=[False,False]):
-#"""
-#Données :
+
+#    Données :
 #    text (Chaine de caractères) que l'on souhaite afficher sur lécran lcd
 
 #        Options :
@@ -69,7 +69,7 @@ def afficherLCD(text,rgb=[0,255,0],nbrOption=0,ignorer=[False,False]):
 #Résultat :
 #    Affiche le texte sur l'écran LCD
 #    Lorsque l'utilisateur agit sur un bouton/potentiomètre actif, alors la fonction prend fin et renvoie des informations sur l'action
-#"""
+
 
     ### Initialise la couleur de fond
     setRGB(rgb[0],rgb[1],rgb[2])
