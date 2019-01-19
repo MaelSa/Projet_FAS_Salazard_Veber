@@ -10,6 +10,7 @@ class Quiz:
         self.end_text = end_text
         self.code = code
     def executer_quiz(self):
+        print("Bienvenue dans le quizz")
         afficherLCD("Bienvenue dans le quiz")
         time.sleep(2)
         score = 0
