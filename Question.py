@@ -85,8 +85,14 @@ class QuestionAssist:
         if num_print > 10:
             num_print = 10
         quit = False
+        time.sleep(2)
+        k = 1
         while not quit:
+            if k == 1:
+                time.sleep(1)
+                k = 0
             action_potentiometre, action_bouton1, action_bouton2 = afficherLCD(str(num_print),[255,1,1],10)
+
             print(action_potentiometre)
             if action_potentiometre == 1 and num_print != self.range - 1:
                 num_print += 1
