@@ -8,9 +8,10 @@ fin_de_programme = False
 while not fin_de_programme:
     Option_choisie = menu_options([Mode_1_joueur, Mode_2_joueurs])
     print("L'option choisie est ", Option_choisie)
-    if Option_choisie == 0: #On lance le mode 1 joueur
+    if Option_choisie == 1: #On lance le mode 1 joueur
         changer_mode = False
         while not changer_mode:
+            print("on entre dans le menu des quizz")
             choix_quiz1 = Option("Quiz1", [255, 0, 0], "")
             choix_quiz2 = Option("Quiz2", [0, 255, 0], "")
             choix_quiz3 = Option("Quiz3", [0, 0, 255], "")
