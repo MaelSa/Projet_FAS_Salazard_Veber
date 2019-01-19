@@ -2,7 +2,7 @@
 from EcranLCD import *
 from Options import *
 from Instances_classes import *
-from time import *
+import time
 Mode_1_joueur = Option("Mode 1 joueur", [255,0,0], "")
 Mode_2_joueurs = Option("Mode 2 joueurs", [0,255,0], "")
 fin_de_programme = False
