@@ -52,10 +52,8 @@ def action(temps,nbrOption=0,ignorer=[False,False]):
     return mvtPosition,bouton1,bouton2
 
 
-
 ##### AFFICHER : Print sur écran #####
-
-def afficherLCD(text,rgb=[0,255,0],nbrOption=0,ignorer=[False,False]):
+def afficherLCD(text,rgb=[0,255,0], nbrOption = 0, ignorer=[False,False]):
 
 #    Données :
 #    text (Chaine de caractères) que l'on souhaite afficher sur lécran lcd
@@ -144,7 +142,10 @@ def menu_options(Options):
             num_current_option -= 1
         elif action_bouton1:
             quit = True
-    return num_current_option
+        elif action_bouton2:
+            quit = True
+            num_current_option = 0
+    return num_current_option + 1
 
 ########## TESTS ##########
 

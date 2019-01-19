@@ -11,12 +11,19 @@ class Quiz:
     def executer_quiz(self):
         afficherLCD("Bienvenue dans le quiz")
         score = 0
-        for i in self.questions:
+        i = 0
+        retour_selection_quiz = False
+        while i < len(self.questions) and not retour_selection_quiz:
 
             print("ON EXECTUTE LE QUIZZ")
-            answer = i.executer_question()
+            answer = self.questions[i].executer_question()
             print("réponse donnée", answer)
-            if answer:
+
+            if answer == -1:
+                score = -1
+                retour_selection_quiz = True
+            elif answer:
                 score += 1
                 #On allume led verte brièvement, else on allume led rouge brièvement (si la réponse est fausse
+            i += 1
         return score

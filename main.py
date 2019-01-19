@@ -1,7 +1,6 @@
 #Main projet FASO rallye musée
 from EcranLCD import *
 from Options import *
-from menu import *
 from Instances_classes import *
 Mode_1_joueur = Option("Mode 1 joueur", [255,0,0], "")
 Mode_2_joueurs = Option("Mode 2 joueurs", [0,255,0], "")

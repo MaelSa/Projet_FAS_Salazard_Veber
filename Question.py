@@ -5,17 +5,25 @@ from EcranLCD import *
 
 class QuestionQCM:
     """Classe pour programmer des questions avec une réponse de type QCM"""
-    def __init__(self, options, answer):
+    def __init__(self, name, options, answer):
         """options : array of options, answuer : option"""
         self.options = options #(Liste) Les différentes options du QCM (ces objets sont donc des instances de la classe option)
         self.answer = answer #(Entier) entier correspondant à l'indice de la réponse dans la liste des options
-
+        self.name = name
     def executer_question(self):
         """laisse tourner le menu tant qu'une option n'a pas été selectionnée"""
         #On utilise simplemen l'option menu, qui nous renvoie l'option selectionnée en passant la liste des opions en paramètre
         #return un bool si la réponse est juste ou fausse
+        afficherLCD(self.name)
+        bouton1 = False
+        while not bouton1:
+            bouton1 = digitalRead(3)
+
         answer = menu_options(self.options)
-        return answer == self.answer
+        if answer == -1:
+            return -1
+        else:
+            return answer == self.answer
 
 class QuestionsINT:
     """Classe pour programmer des questions qui attendent comme réponse un entier"""
