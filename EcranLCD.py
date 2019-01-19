@@ -135,6 +135,7 @@ def menu_options(Options):
             num_current_option -= 1
         elif action_bouton1:
             quit = True
+            print("On quitte le menu")
         elif action_bouton2:
             quit = True
             num_current_option = -1
