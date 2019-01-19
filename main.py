@@ -17,7 +17,14 @@ while not fin_de_programme:
 
             if quiz_choisi == 1:
                 score = quiz1.executer_quiz()
-                print(score)
+                if score == -1:
+                    changer_mode = True
+                    afficherLCD("Retour au choix du mode de jeu")
+                    time.sleep(2)
+                else:
+                    score_string = str(score)
+                    affichage_score = "Votre score sur ce quizz est de " + score_string
+                    afficherLCD(affichage_score)
             #elif quiz_choisi == 2:
 
 #else:#On lance le mode 2 joueurs
