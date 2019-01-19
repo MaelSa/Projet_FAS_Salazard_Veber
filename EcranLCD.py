@@ -81,7 +81,7 @@ def afficherLCD(text,rgb=[0,255,0], nbrOption = 0, ignorer=[False,False]):
 
 
         ## Si un mot est coupé en 2
-        if (text[i*16-1] != " ") and (text[i*16-1] != ",") and (text[i*16-1] != "!") and (text[i*16-1] != "?") and (text[i*16-1] != ":") and (text[i*16] != " "):
+        if (text[i*16-1] != " ") and (text[i*16-1] != ",") and (text[i*16-1] != "!") and (text[i*16-1] != "?") and (text[i*16-1] != ":") and (text[i*16-1] != " "):
             decalage=1 # Invariant
             caractere=text[i*16-1-decalage]
 
