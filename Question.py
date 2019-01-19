@@ -14,7 +14,7 @@ class QuestionQCM:
         """laisse tourner le menu tant qu'une option n'a pas été selectionnée"""
         #On utilise simplemen l'option menu, qui nous renvoie l'option selectionnée en passant la liste des opions en paramètre
         #return un bool si la réponse est juste ou fausse
-        afficherLCD(self.name)
+        pot, bouton1, bouton2 = afficherLCD(self.name)
 
         bouton1 = False
         while not bouton1:
@@ -38,7 +38,7 @@ class QuestionsINT:
 
     def executer_question(self):
         #"""lit en continu les réponses"""
-        afficherLCD(self.name)
+        pot, bouton1, bouton2 = afficherLCD(self.name)
 
         print("On a affiché le nom de la question")
 
