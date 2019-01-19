@@ -4,13 +4,16 @@ from Question import *
 from Options import *
 from Quiz import *
 
+option1 = Option()
 
-Question_1 = QuestionAssist("Trouver le serpent",(0,0,0),0,0)
+Question_1 = QuestionAssist("Trouver le serpent", (100, 20, 100), 2, 5)
 #Réponse : en or, en dessous du pot qui fume
 
 Question_3 = QuestionsINT("Combien de personnages", 15, 0, 40)
 
-Question_8 = QuestionAssist("Trouver la lance/marteau",(0,0,0),0,0)
+
+
+Question_8 = QuestionAssist("Trouver la lance/marteau", (0, 0, 0), 0, 0)
 #Réponse, vers la droite
 
 #Question_10a = QuestionQCM() Il faut d'abord faire les options

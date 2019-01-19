@@ -15,6 +15,7 @@ class QuestionQCM:
         #On utilise simplemen l'option menu, qui nous renvoie l'option selectionnée en passant la liste des opions en paramètre
         #return un bool si la réponse est juste ou fausse
         afficherLCD(self.name)
+        time.sleep(2)
         bouton1 = False
         while not bouton1:
             bouton1 = digitalRead(3)
@@ -38,6 +39,7 @@ class QuestionsINT:
     def executer_question(self):
         #"""lit en continu les réponses"""
         afficherLCD(self.name)
+        time.sleep(2)
         bouton1 = False
         while not bouton1:
             bouton1 = digitalRead(3)
@@ -76,6 +78,7 @@ class QuestionAssist:
     def answer_choice(self):
         """affiche des nombres à l'écran, qu'on change en tournant le potentiomètre, on appuie pour valider la réponse, retourne le nombre affiché à l'écran au moment de l'appui du bouton"""
         afficherLCD(self.name)
+        time.sleep(2)
         bouton1 = False
         while not bouton1:
             bouton1 = digitalRead(3)
