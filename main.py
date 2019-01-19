@@ -2,6 +2,7 @@
 from EcranLCD import *
 from Options import *
 from Instances_classes import *
+from time import *
 Mode_1_joueur = Option("Mode 1 joueur", [255,0,0], "")
 Mode_2_joueurs = Option("Mode 2 joueurs", [0,255,0], "")
 fin_de_programme = False
@@ -15,7 +16,7 @@ while not fin_de_programme:
             choix_quiz1 = Option("Quiz1", [255, 0, 0], "")
             choix_quiz2 = Option("Quiz2", [0, 255, 0], "")
             choix_quiz3 = Option("Quiz3", [0, 0, 255], "")
-
+            time.sleep(1)
             quiz_choisi = menu_options([choix_quiz1, choix_quiz2, choix_quiz3])
             print("le quizz choisi est ", quiz_choisi)
             if quiz_choisi == 1:
