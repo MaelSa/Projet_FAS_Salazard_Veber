@@ -48,6 +48,6 @@ Question_8 = QuestionAssist("Trouver la lance/marteau",(0,0,0),0,0)
 
 #Question_13 = QuestionQCM()
 
-quiz1 = Quiz([Question_1, Question_3, Question_2],"Debut du quiz 1","fin du quiz 1",2)
+quiz1 = Quiz([Question_2, Question_1, Question_3],"Debut du quiz 1","fin du quiz 1",2)
 quiz2 = Quiz([Question_1, Question_3, Question_8],"Debut du quiz 1","fin du quiz 1",2)
 quiz3 = Quiz([Question_1, Question_3, Question_8],"Debut du quiz 1","fin du quiz 1",2)
