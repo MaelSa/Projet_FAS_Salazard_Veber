@@ -40,7 +40,7 @@ class QuestionsINT:
         #"""lit en continu les réponses"""
         afficherLCD(self.name)
 
-        
+        print("On a affiché le nom de la question")
 
         num_print = analogRead(0)//self.range
         quit = False
