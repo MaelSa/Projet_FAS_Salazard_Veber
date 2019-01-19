@@ -19,7 +19,8 @@ class QuestionQCM:
         bouton1 = False
         while not bouton1:
             bouton1 = digitalRead(3)
-
+        print("ON DORT")
+        time.sleep(1)
         answer = menu_options(self.options)
         if answer == -1:
             return -1
