@@ -37,6 +37,11 @@ class QuestionsINT:
 
     def executer_question(self):
         #"""lit en continu les réponses"""
+        afficherLCD(self.name)
+        bouton1 = False
+        while not bouton1:
+            bouton1 = digitalRead(3)
+
         num_print = analogRead(0)//self.range
         quit = False
         if num_print > self.range_end:
@@ -50,7 +55,13 @@ class QuestionsINT:
                 num_print -= 1
             elif action_bouton1:
                 quit = True
-        return num_print == self.answer
+            elif action_bouton2:
+                num_print = -1
+                quit = True
+        if num_print == -1:
+            return -1
+        else:
+            return num_print == self.answer
 
 
 class QuestionAssist:
@@ -61,8 +72,13 @@ class QuestionAssist:
         self.code_false = code_false
         self.color = color
         self.range = 10
+        self.name = name
     def answer_choice(self):
         """affiche des nombres à l'écran, qu'on change en tournant le potentiomètre, on appuie pour valider la réponse, retourne le nombre affiché à l'écran au moment de l'appui du bouton"""
+        afficherLCD(self.name)
+        bouton1 = False
+        while not bouton1:
+            bouton1 = digitalRead(3)
         num_print = analogRead(0)//10
         if num_print > 10:
             num_print = 10
@@ -76,14 +92,19 @@ class QuestionAssist:
                 num_print -= 1
             elif action_bouton1:
                 quit = True
-                return num_print
+            elif action_bouton2:
+                num_print = -1
+
+        return num_print
 
     def executer_question(self):
         """vérifie si la réponse donnée est juste ou fausse"""
         answer_given = False
-        while answer_given != self.code_false and answer_given != self.code_right: #On boucle tant que le code donné ne correspond pas à la réponse juste ou la réponse fausse (on fait cela pour éviter les erreurs possibles sur les entrées)
+        while answer_given != self.code_false and answer_given != self.code_right and answer_given != -1: #On boucle tant que le code donné ne correspond pas à la réponse juste ou la réponse fausse (on fait cela pour éviter les erreurs possibles sur les entrées)
             answer_given = self.answer_choice()
-        if answer_given == self.code_false:
+        if answer_given == -1:
+            return -1
+        elif answer_given == self.code_false:
             return False
         else:
             return True

@@ -16,6 +16,7 @@ while not fin_de_programme:
             quiz_choisi = menu_options([choix_quiz1, choix_quiz2, choix_quiz3])
 
             if quiz_choisi == 1:
+
                 score = quiz1.executer_quiz()
                 if score == -1:
                     changer_mode = True
@@ -25,6 +26,9 @@ while not fin_de_programme:
                     score_string = str(score)
                     affichage_score = "Votre score sur ce quizz est de " + score_string
                     afficherLCD(affichage_score)
+                    bouton1 = False
+                    while not bouton1:
+                        bouton1 = digitalRead(3)
             #elif quiz_choisi == 2:
 
 #else:#On lance le mode 2 joueurs
