@@ -39,10 +39,8 @@ class QuestionsINT:
     def executer_question(self):
         #"""lit en continu les réponses"""
         afficherLCD(self.name)
-        time.sleep(2)
-        bouton1 = False
-        while not bouton1:
-            bouton1 = digitalRead(3)
+
+        
 
         num_print = analogRead(0)//self.range
         quit = False
