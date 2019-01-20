@@ -82,8 +82,9 @@ class QuestionAssist:
         self.name = name
     def answer_choice(self):
         """affiche des nombres à l'écran, qu'on change en tournant le potentiomètre, on appuie pour valider la réponse, retourne le nombre affiché à l'écran au moment de l'appui du bouton"""
+        print("on affiche la question")
         afficherLCD(self.name)
-        time.sleep(2)
+        print("on sort de l'affichage de la question")
         bouton1 = False
         while not bouton1:
             bouton1 = digitalRead(3)

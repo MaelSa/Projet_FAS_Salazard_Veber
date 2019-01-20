@@ -8,7 +8,7 @@ option1 = Option("Premiere option", [0, 255, 255], "")
 option2 = Option("Seconde option", [0, 100, 50], "")
 option3 = Option("Troisieme option", [40,50,100], "")
 
-Question_1 = QuestionAssist("Trouver le serpent", (100, 20, 100), 2, 5)
+Question_1 = QuestionAssist("Trouver le serpent", [100, 20, 100], 2, 5)
 #Réponse : en or, en dessous du pot qui fume
 
 Question_3 = QuestionsINT("Combien de personnages", 15, 0, 40)
