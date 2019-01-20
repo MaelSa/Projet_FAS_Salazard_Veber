@@ -19,7 +19,7 @@ while not finfin:
             if response != "b''":
                 print(response)
                 c += 1
-                if c > 3:
+                if c > 6:
                     fin = True
                     finfin = True
 
