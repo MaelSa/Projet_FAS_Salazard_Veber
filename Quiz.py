@@ -76,6 +76,7 @@ class Quiz:
                 # On allume led verte brièvement, else on allume led rouge brièvement (si la réponse est fausse
                 digitalWrite(led_bleue, 1)
                 afficherLCD("Reponse juste !", [0, 255, 0])
+                time.sleep(1)
                 string = "Réponse juste donnée"
                 stringsend = string.encode()
                 socket.send(stringsend)
