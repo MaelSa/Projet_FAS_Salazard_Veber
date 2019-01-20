@@ -42,6 +42,7 @@ class Quiz:
             else:
                 digitalWrite(led_rouge, 1)
                 afficherLCD("Reponse fausse !", [255, 0, 0])
+                time.sleep(1)
                 digitalWrite(led_rouge, 0)
             i += 1
         return score
