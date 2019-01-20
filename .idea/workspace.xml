@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69a8aeaf-b244-4f2e-abbb-81d1a88a485c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Mode_2_joueurs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mode_2_joueurs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quiz.py" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,18 +34,18 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3888" />
+          <entry key="py" value="3964" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3888" />
+          <entry key="Python" value="3964" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.29718006">
+    <splitter split-orientation="vertical" split-proportion="0.5661605">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -102,8 +102,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Quiz.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-5">
-                  <caret line="58" column="40" lean-forward="true" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+                <state relative-caret-position="341">
+                  <caret line="100" column="22" selection-start-line="100" selection-start-column="22" selection-end-line="100" selection-end-column="22" />
                   <folding>
                     <element signature="e#57#79#0" expanded="true" />
                   </folding>
@@ -175,8 +175,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+                <state relative-caret-position="193">
+                  <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
                 </state>
               </provider>
             </entry>
@@ -217,15 +217,15 @@
         <option value="$PROJECT_DIR$/EcranLCD.py" />
         <option value="$PROJECT_DIR$/Question.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/Quiz.py" />
         <option value="$PROJECT_DIR$/Mode_2_joueurs.py" />
+        <option value="$PROJECT_DIR$/Quiz.py" />
         <option value="$PROJECT_DIR$/server.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="119" />
-    <option name="y" value="-25" />
+    <option name="x" value="139" />
+    <option name="y" value="-8" />
     <option name="width" value="1612" />
     <option name="height" value="867" />
   </component>
@@ -383,13 +383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Options.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -451,10 +444,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Quiz.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="58" column="40" lean-forward="true" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+        <state relative-caret-position="341">
+          <caret line="100" column="22" selection-start-line="100" selection-start-column="22" selection-end-line="100" selection-end-column="22" />
           <folding>
             <element signature="e#57#79#0" expanded="true" />
           </folding>
@@ -463,8 +463,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="193">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
         </state>
       </provider>
     </entry>
