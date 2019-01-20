@@ -101,4 +101,5 @@ class Quiz:
         string = "fin"
         stringsend = string.encode()
         socket.send(stringsend)
+        socket.close()
         return score
