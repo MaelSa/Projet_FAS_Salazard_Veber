@@ -4,11 +4,11 @@ from Options import *
 # A insérer à la ligne 7 de Instances_classes.py
 
 #Alexandre consulte l'oracle d'Apollon
-tableau1 = QuestionAssist("Trouver le serpent", (100, 20, 100), 2, 5, 'tableau1.wav')
+tableau1 = QuestionAssist("Trouver le serpent", (100, 20, 100), 2, 5, 'tableau1')
 #Réponse : en or, en dessous du pot qui fume
 
 #Ariane dans l'île de Naxos
-tableau3 = QuestionsINT("Combien de personnages ?", 15, 0, 40, 'tableau3.wav')
+tableau3 = QuestionsINT("Combien de personnages ?", 15, 0, 40, 'tableau3')
 
 #Fermeté de Jubellius Taurea
 option10a = Option("L aigle Romaine", [0, 255, 255], "")
@@ -43,7 +43,7 @@ tableau14 = QuestionAssist("Trouver les deux etoiles de David", (100, 20, 100), 
 #Réponse : dans l'arbre
 
 #La Formation de l'Homme par Prométhée aidé du secours de Minerve
-tableau15 = QuestionsINT("Combien d’animaux ?", 5, 0, 10, 'tableau15.wav')
+tableau15 = QuestionsINT("Combien d’animaux ?", 5, 0, 10, 'tableau15')
 
 
 # QUIZ
