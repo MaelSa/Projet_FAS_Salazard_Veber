@@ -2,6 +2,7 @@
 from EcranLCD import *
 from Options import *
 from Instances_classes import *
+from Mode_2_joueurs import *
 import time
 led_rouge = 4
 led_bleue = 7
@@ -59,6 +60,9 @@ while not fin_de_programme:
                     bouton1 = False
                     while not bouton1:
                         bouton1 = digitalRead(3)
+
+            elif quiz_choisi == 1:
+                executer_mode_2()
 
             elif quiz_choisi == 0:
                 changer_mode = True

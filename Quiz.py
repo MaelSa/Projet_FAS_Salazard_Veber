@@ -47,3 +47,34 @@ class Quiz:
                 digitalWrite(led_rouge, 0)
             i += 1
         return score
+
+    def executer_quiz_mode_2_joueurs(self):
+        print("Bienvenue dans le quizz")
+        afficherLCD("Bienvenue dans le quiz")
+        time.sleep(2)
+        score = 0
+        i = 0
+        retour_selection_quiz = False
+        while i < len(self.questions) and not retour_selection_quiz:
+            answer = self.questions[i].executer_question()
+            print("réponse donnée", answer)
+
+            if answer == -1:
+                score = -1
+                retour_selection_quiz = True
+                afficherLCD("Retour au choix des quizz", [0, 100, 50])
+                time.sleep(1)
+            elif answer:
+                score += 1
+                # On allume led verte brièvement, else on allume led rouge brièvement (si la réponse est fausse
+                digitalWrite(led_bleue, 1)
+                afficherLCD("Reponse juste !", [0, 255, 0])
+                digitalWrite(led_bleue, 0)
+
+            else:
+                digitalWrite(led_rouge, 1)
+                afficherLCD("Reponse fausse !", [255, 0, 0])
+                time.sleep(1)
+                digitalWrite(led_rouge, 0)
+            i += 1
+        return score
