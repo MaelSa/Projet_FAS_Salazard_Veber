@@ -59,7 +59,7 @@ while not fin_de_programme:
                     while not bouton1:
                         bouton1 = digitalRead(3)
 
-            elif quiz_choisi == -1:
+            elif quiz_choisi == 0:
                 changer_mode = True
 
 #else:#On lance le mode 2 joueurs
