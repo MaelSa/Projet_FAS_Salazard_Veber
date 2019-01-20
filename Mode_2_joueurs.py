@@ -10,6 +10,7 @@ hote = "192.168.1.53"
 port = 8888
 
 def executer_mode_2():
+    import socket
     hote = "192.168.1.53"
     port = 8888
     socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
