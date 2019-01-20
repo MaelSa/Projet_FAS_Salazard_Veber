@@ -1,10 +1,13 @@
 from grovepi import *
 import time
 from Fonctions_lcd import *
+import pygame
+from pygame.locals import *
 
 ##### ACTION : Surveille les entrées #####
 
-def action(temps,nbrOption=0,ignorer=[False,False]):
+
+def action(temps, nbrOption=0, ignorer=[False,False]):
 #'''
 #Données :
 #    temps (int>0) détermine combien de temps les boutons/potentiomètre sont surveillés
@@ -49,11 +52,11 @@ def action(temps,nbrOption=0,ignorer=[False,False]):
         tCourant=time.time()
 
     ### Renvoie ce qui a été détecté
-    return mvtPosition,bouton1,bouton2
+    return mvtPosition, bouton1, bouton2
 
 
 ##### AFFICHER : Print sur écran #####
-def afficherLCD(text,rgb=[0,255,0], nbrOption = 0, ignorer=[False,False]):
+def afficherLCD(text, rgb=[0,255,0], son = "", nbrOption = 0, ignorer=[False,False]):
 
 #    Données :
 #    text (Chaine de caractères) que l'on souhaite afficher sur lécran lcd
@@ -67,18 +70,21 @@ def afficherLCD(text,rgb=[0,255,0], nbrOption = 0, ignorer=[False,False]):
 #Résultat :
 #    Affiche le texte sur l'écran LCD
 #    Lorsque l'utilisateur agit sur un bouton/potentiomètre actif, alors la fonction prend fin et renvoie des informations sur l'action
-
+    if son != "":
+        sound = pygame.mixer.Sound(son)
 
     ### Initialise la couleur de fond
-    setRGB(rgb[0],rgb[1],rgb[2])
+    setRGB(rgb[0], rgb[1], rgb[2])
 
     ### Analyse du texte
     reste=len(text)%16
     nbrLigne=len(text)//16+1
-
+    sound_played = False
     i=1 # Itérateur de ligne
     while i<nbrLigne:
-
+        if not sound_played and son != "":
+            son.play()
+            sound_played = True
 
         ## Si un mot est coupé en 2
         if (text[i*16-1] != " ") and (text[i*16-1] != ",") and (text[i*16-1] != "!") and (text[i*16-1] != "?") and (text[i*16-1] != ":") and (text[i*16-1] != " "):
@@ -113,7 +119,9 @@ def afficherLCD(text,rgb=[0,255,0], nbrOption = 0, ignorer=[False,False]):
             lignes=text[i*16:(i+2)*16] # Caractères 0 à 31 etc
             setText(lignes)
             i+=1
-            pot,bouton1,bouton2=action(2,nbrOption,ignorer)
+            pot, bouton1, bouton2 = action(2, nbrOption, ignorer)
+    if sound_played:
+        son.stop()
 
     return pot,bouton1,bouton2
 
@@ -135,7 +143,6 @@ def menu_options(Options):
             num_current_option -= 1
         elif action_bouton1:
             quit = True
-            print("On quitte le menu")
         elif action_bouton2:
             quit = True
             num_current_option = -1

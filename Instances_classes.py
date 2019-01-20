@@ -16,24 +16,7 @@ Question_3 = QuestionsINT("Combien de personnages", 15, 0, 40)
 Question_2 = QuestionQCM("Question qcm",[option1, option2, option3], 1)
 
 Question_8 = QuestionAssist("Trouver la lance/marteau", (0, 0, 0), 0, 0)
-#Réponse, vers la droite
 
-#Question_10a = QuestionQCM() Il faut d'abord faire les options
-#Question_10b = QuestionQCM() Il faut d'abotd faire les options
-
-#Question_11 = QuestionQCM()
-
-#Question_12 =  QuestionQCM()
-
-#Question_13 = QuestionQCM()
-
-#Fichier regroupant la liste des questions)
-#La numérotation des questions correspond à la numérotation des oeuvres
-
-
-
-
-
-quiz1 = Quiz([Question_2, Question_1, Question_3],"Debut du quiz 1","fin du quiz 1",2)
-quiz2 = Quiz([Question_1, Question_3, Question_8],"Debut du quiz 1","fin du quiz 1",2)
-quiz3 = Quiz([Question_1, Question_3, Question_8],"Debut du quiz 1","fin du quiz 1",2)
+quiz1 = Quiz([Question_2, Question_1, Question_3], "Debut du quiz 1", "fin du quiz 1", 2)
+quiz2 = Quiz([Question_1, Question_3, Question_8],"Debut du quiz 1","fin du quiz 1", 2)
+quiz3 = Quiz([Question_1, Question_3, Question_8],"Debut du quiz 1","fin du quiz 1", 2)

@@ -16,8 +16,9 @@ else:
 DISPLAY_RGB_ADDR = 0x62
 DISPLAY_TEXT_ADDR = 0x3e
 
+
 # set backlight to (R,G,B) (values from 0..255 for each)
-def setRGB(r,g,b):
+def setRGB(r, g, b):
     bus.write_byte_data(DISPLAY_RGB_ADDR,0,0)
     bus.write_byte_data(DISPLAY_RGB_ADDR,1,0)
     bus.write_byte_data(DISPLAY_RGB_ADDR,0x08,0xaa)
@@ -25,9 +26,11 @@ def setRGB(r,g,b):
     bus.write_byte_data(DISPLAY_RGB_ADDR,3,g)
     bus.write_byte_data(DISPLAY_RGB_ADDR,2,b)
 
+
 # send command to display (no need for external use)
 def textCommand(cmd):
     bus.write_byte_data(DISPLAY_TEXT_ADDR,0x80,cmd)
+
 
 # set display text \n for second line(or auto wrap)
 def setText(text):

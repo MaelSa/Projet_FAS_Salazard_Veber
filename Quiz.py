@@ -25,7 +25,6 @@ class Quiz:
         i = 0
         retour_selection_quiz = False
         while i < len(self.questions) and not retour_selection_quiz:
-            print("ON EXECTUTE LE QUIZZ")
             answer = self.questions[i].executer_question()
             print("réponse donnée", answer)
 
