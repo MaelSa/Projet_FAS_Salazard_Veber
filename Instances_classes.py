@@ -1,3 +1,6 @@
+from Question import *
+from Quiz import *
+from Options import *
 # A insérer à la ligne 7 de Instances_classes.py
 
 #Alexandre consulte l'oracle d'Apollon
