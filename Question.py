@@ -21,7 +21,7 @@ class QuestionQCM:
         """laisse tourner le menu tant qu'une option n'a pas été selectionnée"""
         #On utilise simplemen l'option menu, qui nous renvoie l'option selectionnée en passant la liste des opions en paramètre
         #return un bool si la réponse est juste ou fausse
-        pot, bouton1, bouton2 = afficherLCD(self.name, self.son)
+        pot, bouton1, bouton2 = afficherLCD(self.name,[50,50,50], self.son)
 
         bouton1 = False
         while not bouton1:
