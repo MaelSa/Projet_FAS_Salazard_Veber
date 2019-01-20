@@ -80,7 +80,7 @@ class Quiz:
                 digitalWrite(led_bleue, 1)
                 afficherLCD("Reponse juste !", [0, 255, 0])
                 time.sleep(1)
-                string = "Reponse juste donnee"
+                string = "Reponse juste"
                 stringsend = string.encode()
                 socket.send(stringsend)
                 digitalWrite(led_bleue, 0)
@@ -88,13 +88,13 @@ class Quiz:
             else:
                 digitalWrite(led_rouge, 1)
                 afficherLCD("Reponse fausse !", [255, 0, 0])
-                string = "Reponse donnee fausse"
+                string = "Reponse fausse"
                 stringsend = string.encode()
                 socket.send(stringsend)
                 time.sleep(1)
                 digitalWrite(led_rouge, 0)
             i += 1
-        string = "Le score est de 2"
+        string = "Le score est de " + str(score)
         stringsend = string.encode()
         socket.send(stringsend)
 
