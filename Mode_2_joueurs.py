@@ -1,5 +1,9 @@
 #Mode deux joueurs avec structure client-serveur en wifi
-
+from EcranLCD import *
+from Options import *
+from Instances_classes import *
+from Mode_2_joueurs import *
+import time
 import socket
 
 hote = "192.168.1.53"
@@ -35,7 +39,7 @@ def executer_mode_2():
                 digitalWrite(led_rouge, 0)
                 digitalWrite(led_bleue, 0)
                 time.sleep(0.5)
-            score = quiz1.executer_quiz()
+            score = quiz1.executer_quiz_mode_2_joueurs()
             if score == -1:
                 changer_mode = True
                 afficherLCD("Retour au choix du mode de jeu")
