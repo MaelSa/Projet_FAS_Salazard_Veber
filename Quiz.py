@@ -38,6 +38,7 @@ class Quiz:
                 #On allume led verte brièvement, else on allume led rouge brièvement (si la réponse est fausse
                 digitalWrite(led_bleue, 1)
                 afficherLCD("Reponse juste !", [0, 255, 0])
+                time.sleep(1)
                 digitalWrite(led_bleue, 0)
 
             else:
@@ -45,6 +46,7 @@ class Quiz:
                 afficherLCD("Reponse fausse !", [255, 0, 0])
                 time.sleep(1)
                 digitalWrite(led_rouge, 0)
+               
             i += 1
         return score
 
