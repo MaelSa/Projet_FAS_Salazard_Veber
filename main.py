@@ -32,7 +32,7 @@ while not fin_de_programme:
                 digitalWrite(led_rouge, 0)
                 digitalWrite(led_bleue, 0)
 
-            choix_quiz1 = Option("Quiz1", [255, 0, 0], "")
+            choix_quiz1 = Option("Quiz1", [0, 50, 100], "")
             choix_quiz2 = Option("Quiz2", [0, 255, 0], "")
             choix_quiz3 = Option("Quiz3", [0, 0, 255], "")
             time.sleep(1)
@@ -58,7 +58,9 @@ while not fin_de_programme:
                     bouton1 = False
                     while not bouton1:
                         bouton1 = digitalRead(3)
-            #elif quiz_choisi == 2:
+
+            elif quiz_choisi == -1:
+                changer_mode = True
 
 #else:#On lance le mode 2 joueurs
 

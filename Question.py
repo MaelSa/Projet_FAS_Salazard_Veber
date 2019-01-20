@@ -53,7 +53,13 @@ class QuestionsINT:
         quit = False
         if num_print > self.range_end:
             num_print = self.range_end
+        time.sleep(2)
+        k = 1
         while not quit:
+
+            if k == 1:
+                time.sleep(1)
+                k = 0
             action_potentiometre, action_bouton1, action_bouton2 = afficherLCD(str(num_print),[0,255,0],self.range)
             print(action_potentiometre)
             if action_potentiometre == 1 and num_print != self.range - 1:
