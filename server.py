@@ -5,7 +5,7 @@ socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 socket.bind(('', 8888))
 
 while True:
-        socket.listen(5)
+        socket.listen(1)
         client, address = socket.accept()
         print("{} connected".format( address ))
 
