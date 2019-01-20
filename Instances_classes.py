@@ -14,12 +14,12 @@ tableau3 = QuestionsINT("Combien de personnages ?", 15, 0, 40)
 option10a = Option("L aigle Romaine", [0, 255, 255], "")
 option10b = Option("Le Faucon Romain", [255, 0, 255], "")
 option10c = Option("La Chouette Grecque", [255, 255, 0], "")
-tableau10a = QuestionQCM("Quel oiseau peut on voir au dessus de la devise SPQR ?",[option10a, option10b, option10c], 1)
+tableau10a = QuestionQCM("Quel oiseau est au dessus de SPQR ?",[option10a, option10b, option10c], 1)
 
 option10d = Option("Sumus pridque romanus", [0, 255, 255], "")
 option10e = Option("Senatus populusque romanus", [255, 0, 255], "")
 option10f = Option("Sanctificus puncque romanus", [255, 255, 0], "")
-tableau10b = QuestionQCM("Que veut dire SPQR, embleme de Rome ?",[option10d, option10e, option10f], 2)
+tableau10b = QuestionQCM("Que veut dire SPQR ?",[option10d, option10e, option10f], 2)
 
 #Hector exposé sur les rives du Scamandre après avoir été tué par Achille et traîné à son char ; Vénus préserve son corps de la corruption
 option11a = Option("Vrai", [0, 255, 255], "")
