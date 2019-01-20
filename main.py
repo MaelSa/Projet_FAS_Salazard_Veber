@@ -61,6 +61,47 @@ while not fin_de_programme:
                     while not bouton1:
                         bouton1 = digitalRead(3)
 
+            if quiz_choisi == 2:
+                for i in range(2):
+                    digitalWrite(led_rouge, 1)
+                    digitalWrite(led_bleue, 1)
+                    time.sleep(0.5)
+                    digitalWrite(led_rouge, 0)
+                    digitalWrite(led_bleue, 0)
+                    time.sleep(0.5)
+                score = quiz2.executer_quiz()
+                if score == -1:
+                    changer_mode = True
+                    afficherLCD("Retour au choix du mode de jeu")
+                    time.sleep(2)
+                else:
+                    score_string = str(score)
+                    affichage_score = "Votre score sur ce quizz est de " + score_string
+                    afficherLCD(affichage_score)
+                    bouton1 = False
+                    while not bouton1:
+                        bouton1 = digitalRead(3)
+
+            if quiz_choisi == 3:
+                for i in range(2):
+                    digitalWrite(led_rouge, 1)
+                    digitalWrite(led_bleue, 1)
+                    time.sleep(0.5)
+                    digitalWrite(led_rouge, 0)
+                    digitalWrite(led_bleue, 0)
+                    time.sleep(0.5)
+                score = quiz3.executer_quiz()
+                if score == -1:
+                    changer_mode = True
+                    afficherLCD("Retour au choix du mode de jeu")
+                    time.sleep(2)
+                else:
+                    score_string = str(score)
+                    affichage_score = "Votre score sur ce quizz est de " + score_string
+                    afficherLCD(affichage_score)
+                    bouton1 = False
+                    while not bouton1:
+                        bouton1 = digitalRead(3)
 
             elif quiz_choisi == 0:
                 changer_mode = True
