@@ -61,7 +61,7 @@ while not fin_de_programme:
                     while not bouton1:
                         bouton1 = digitalRead(3)
 
-            elif quiz_choisi == 1:
+            elif quiz_choisi == 2:
                 executer_mode_2()
 
             elif quiz_choisi == 0:
