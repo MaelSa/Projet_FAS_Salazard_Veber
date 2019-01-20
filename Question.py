@@ -35,17 +35,18 @@ class QuestionQCM:
 
 class QuestionsINT:
     """Classe pour programmer des questions qui attendent comme réponse un entier"""
-    def __init__(self, name, answer, range_start, range_end):
+    def __init__(self, name, answer, range_start, range_end, son = ''):
         """name : string, answer : int, range : int"""
         self.name = name #La chaîne de caractères correspondant à la question
         self.answer = answer #L'entier attendu en réponse
         self.range_start = range_start
         self.range_end = range_end
         self.range = range_end - range_start
+        self.son = son
 
     def executer_question(self):
         #"""lit en continu les réponses"""
-        pot, bouton1, bouton2 = afficherLCD(self.name)
+        pot, bouton1, bouton2 = afficherLCD(self.name, [0, 100, 50], 0, self.son)
 
         num_print = analogRead(0)//self.range
         quit = False
@@ -77,16 +78,17 @@ class QuestionsINT:
 
 class QuestionAssist:
     """Classe assistée par quelqu'un (nous ou un bénévole), il faut écrire un code pour que la réponse soit juste, il y a aussi un code pour indiquer que la réponse est fausse"""
-    def __init__(self, name, color, code_right, code_false):
+    def __init__(self, name, color, code_right, code_false, son = ''):
         """name : string, color : tuple 3 elements, code_right : int, code_false : int"""
         self.code_right = code_right
         self.code_false = code_false
         self.color = color
         self.range = 10
         self.name = name
+        self.son = son
     def answer_choice(self):
         """affiche des nombres à l'écran, qu'on change en tournant le potentiomètre, on appuie pour valider la réponse, retourne le nombre affiché à l'écran au moment de l'appui du bouton"""
-        afficherLCD(self.name)
+        afficherLCD(self.name, [0,50,100], 0, self.son)
         bouton1 = False
         while not bouton1:
             bouton1 = digitalRead(3)

@@ -83,7 +83,7 @@ def afficherLCD(text, rgb=[0,255,0],  nbrOption = 0, son = "", ignorer=[False,Fa
     i=1 # Itérateur de ligne
     while i<nbrLigne:
         if not sound_played and son != "":
-            son.play()
+            sound.play()
             sound_played = True
 
         ## Si un mot est coupé en 2
