@@ -47,7 +47,7 @@ tableau15 = QuestionsINT("Combien d’animaux ?", 5, 0, 10)
 
 
 # QUIZ
-quiz1 = Quiz([tableau1, tableau3, tableau10b, tableau10a, tableau15], "Debut du quiz 1", "Fin du quiz 1 !", 2)
+quiz1 = Quiz([tableau1, tableau3, tableau10a, tableau10a, tableau15], "Debut du quiz 1", "Fin du quiz 1 !", 2)
 quiz2 = Quiz([tableau12, tableau14, tableau11, tableau13, tableau10a], "Debut du quiz 2", "Fin du quiz 2 !", 2)
 quiz3 = Quiz([tableau13, tableau15, tableau10b, tableau1, tableau12], "Debut du quiz 3", "Fin du quiz 3 !", 2)
 
