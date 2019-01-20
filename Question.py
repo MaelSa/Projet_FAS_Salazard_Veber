@@ -53,7 +53,7 @@ class QuestionsINT:
         quit = False
         if num_print > self.range_end:
             num_print = self.range_end
-        time.sleep(2)
+        time.sleep(1)
         k = 1
         while not quit:
 
@@ -98,7 +98,7 @@ class QuestionAssist:
         if num_print > 10:
             num_print = 10
         quit = False
-        time.sleep(2)
+        time.sleep(1)
         k = 1
         while not quit:
             if k == 1:

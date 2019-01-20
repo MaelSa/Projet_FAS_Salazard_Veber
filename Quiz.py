@@ -32,6 +32,8 @@ class Quiz:
             if answer == -1:
                 score = -1
                 retour_selection_quiz = True
+                afficherLCD("Retour au choix des quizz", [0, 100, 50])
+                time.sleep(1)
             elif answer:
                 score += 1
                 #On allume led verte brièvement, else on allume led rouge brièvement (si la réponse est fausse
