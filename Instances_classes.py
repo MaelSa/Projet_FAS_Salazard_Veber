@@ -17,8 +17,8 @@ option10c = Option("La Chouette Grecque", [255, 255, 0], "")
 tableau10a = QuestionQCM("Quel oiseau est au dessus de SPQR ?",[option10a, option10b, option10c], 1)
 
 option10d = Option("Sumus pridque romanus", [0, 255, 255], "")
-option10e = Option("Senatus populusque romanus", [255, 0, 255], "")
-option10f = Option("Sanctificus puncque romanus", [255, 255, 0], "")
+option10e = Option("Senatus polus romanus", [255, 0, 255], "")
+option10f = Option("Sancticus pune romanus", [255, 255, 0], "")
 tableau10b = QuestionQCM("Que veut dire SPQR ?",[option10d, option10e, option10f], 2)
 
 #Hector exposé sur les rives du Scamandre après avoir été tué par Achille et traîné à son char ; Vénus préserve son corps de la corruption
