@@ -57,6 +57,7 @@ def action(temps, nbrOption=0, ignorer=[False,False]):
 
 ##### AFFICHER : Print sur écran #####
 def afficherLCD(text, rgb=[0,255,0],  nbrOption = 0, son = "", ignorer=[False,False]):
+    print(son)
 
 #    Données :
 #    text (Chaine de caractères) que l'on souhaite afficher sur lécran lcd

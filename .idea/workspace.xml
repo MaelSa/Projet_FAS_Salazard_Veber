@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="69a8aeaf-b244-4f2e-abbb-81d1a88a485c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/EcranLCD.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcranLCD.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Options.py" beforeDir="false" afterPath="$PROJECT_DIR$/Options.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Question.py" beforeDir="false" afterPath="$PROJECT_DIR$/Question.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,18 +33,18 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="4487" />
+          <entry key="py" value="4497" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="4487" />
+          <entry key="Python" value="4497" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.5444685">
+    <splitter split-orientation="vertical" split-proportion="0.3373102">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -119,7 +117,7 @@
             <entry file="file://$PROJECT_DIR$/EcranLCD.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="529">
-                  <caret line="85" column="17" selection-start-line="85" selection-start-column="17" selection-end-line="85" selection-end-column="17" />
+                  <caret line="86" column="17" selection-start-line="86" selection-start-column="17" selection-end-line="86" selection-end-column="17" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -155,8 +153,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/EcranLCD.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1430">
-                  <caret line="121" column="34" selection-start-line="121" selection-start-column="34" selection-end-line="121" selection-end-column="34" />
+                <state relative-caret-position="254">
+                  <caret line="59" column="14" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -225,8 +223,8 @@
         <option value="$PROJECT_DIR$/server.py" />
         <option value="$PROJECT_DIR$/Instances_classes.py" />
         <option value="$PROJECT_DIR$/Options.py" />
-        <option value="$PROJECT_DIR$/EcranLCD.py" />
         <option value="$PROJECT_DIR$/Question.py" />
+        <option value="$PROJECT_DIR$/EcranLCD.py" />
       </list>
     </option>
   </component>
@@ -461,22 +459,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EcranLCD.py">
+    <entry file="file://$PROJECT_DIR$/Question.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="85" column="17" selection-start-line="85" selection-start-column="17" selection-end-line="85" selection-end-column="17" />
+        <state relative-caret-position="1575">
+          <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Question.py">
+    <entry file="file://$PROJECT_DIR$/EcranLCD.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="90" column="45" selection-start-line="90" selection-start-column="45" selection-end-line="90" selection-end-column="45" />
+        <state relative-caret-position="254">
+          <caret line="59" column="14" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
