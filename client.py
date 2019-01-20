@@ -3,7 +3,7 @@
 import socket
 
 hote = "192.168.1.53"
-port = 15555
+port = 8888
 
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 socket.connect((hote, port))
