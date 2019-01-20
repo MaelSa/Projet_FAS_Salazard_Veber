@@ -51,6 +51,7 @@ class Quiz:
         return score
 
     def executer_quiz_mode_2_joueurs(self):
+        import socket
         hote = "192.168.1.53"
         port = 8888
         socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
