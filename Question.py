@@ -3,10 +3,16 @@ from grovepi import *
 import sys
 from EcranLCD import *
 
+led_rouge = 4
+led_bleue = 7
+pinMode(led_bleue, "OUTPUT")
+pinMode(led_rouge, "OUTPUT")
+
+
 class QuestionQCM:
     """Classe pour programmer des questions avec une réponse de type QCM"""
     def __init__(self, name, options, answer):
-        """options : array of options, answuer : option"""
+        """options : array of options, answuer : entier"""
         self.options = options #(Liste) Les différentes options du QCM (ces objets sont donc des instances de la classe option)
         self.answer = answer #(Entier) entier correspondant à l'indice de la réponse dans la liste des options
         self.name = name

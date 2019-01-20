@@ -1,6 +1,14 @@
 #Classe permettant de créer un quiz, suite de questions:
 from EcranLCD import *
 import time
+from grovepi import *
+
+led_rouge = 4
+led_bleue = 7
+pinMode(led_bleue, "OUTPUT")
+pinMode(led_rouge, "OUTPUT")
+
+
 class Quiz:
     def __init__(self, questions, start_text, end_text, code):
         """questions est une liste de questions qui se déroulerons dans l'ordre"""
@@ -27,5 +35,13 @@ class Quiz:
             elif answer:
                 score += 1
                 #On allume led verte brièvement, else on allume led rouge brièvement (si la réponse est fausse
+                digitalWrite(led_bleue, 1)
+                time.sleep(0.5)
+                digitalWrite(led_bleue, 0)
+
+            else:
+                digitalWrite(led_rouge, 1)
+                time.sleep(0.5)
+                digitalWrite(led_rouge, 0)
             i += 1
         return score

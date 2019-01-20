@@ -3,7 +3,19 @@ from EcranLCD import *
 from Options import *
 from Instances_classes import *
 import time
-Mode_1_joueur = Option("Mode 1 joueur", [255,0,0], "")
+led_rouge = 4
+led_bleue = 7
+pinMode(led_bleue, "OUTPUT")
+pinMode(led_rouge, "OUTPUT")
+
+for i in range(3):
+    digitalWrite(led_rouge, 1)
+    digitalWrite(led_bleue, 1)
+    time.sleep(0.5)
+    digitalWrite(led_rouge, 0)
+    digitalWrite(led_bleue, 0)
+
+Mode_1_joueur = Option("Mode 1 joueur", [0,50,50], "")
 Mode_2_joueurs = Option("Mode 2 joueurs", [0,255,0], "")
 fin_de_programme = False
 while not fin_de_programme:
@@ -13,6 +25,13 @@ while not fin_de_programme:
         changer_mode = False
         while not changer_mode:
             print("on entre dans le menu des quizz")
+            for i in range(3):
+                digitalWrite(led_rouge, 1)
+                digitalWrite(led_bleue, 1)
+                time.sleep(0.5)
+                digitalWrite(led_rouge, 0)
+                digitalWrite(led_bleue, 0)
+
             choix_quiz1 = Option("Quiz1", [255, 0, 0], "")
             choix_quiz2 = Option("Quiz2", [0, 255, 0], "")
             choix_quiz3 = Option("Quiz3", [0, 0, 255], "")
@@ -20,6 +39,12 @@ while not fin_de_programme:
             quiz_choisi = menu_options([choix_quiz1, choix_quiz2, choix_quiz3])
             print("le quizz choisi est ", quiz_choisi)
             if quiz_choisi == 1:
+                for i in range(3):
+                    digitalWrite(led_rouge, 1)
+                    digitalWrite(led_bleue, 1)
+                    time.sleep(0.5)
+                    digitalWrite(led_rouge, 0)
+                    digitalWrite(led_bleue, 0)
 
                 score = quiz1.executer_quiz()
                 if score == -1:
@@ -36,3 +61,4 @@ while not fin_de_programme:
             #elif quiz_choisi == 2:
 
 #else:#On lance le mode 2 joueurs
+
