@@ -11,10 +11,10 @@ tableau1 = QuestionAssist("Trouver le serpent", (100, 20, 100), 2, 5, 'tableau1.
 tableau3 = QuestionsINT("Combien de personnages ?", 15, 0, 40, 'tableau3.wav')
 
 #Fermeté de Jubellius Taurea
-option10a = Option("L aigle Romaine", [0, 255, 255], "")
-option10b = Option("Le Faucon Romain", [255, 0, 255], "")
-option10c = Option("La Chouette Grecque", [255, 255, 0], "")
-tableau10a = QuestionQCM("Quel oiseau est au dessus de SPQR ?",[option10a, option10b, option10c], 1)
+option10a = Option("L aigle Romaine", [0, 255, 255], "option10a.wav")
+option10b = Option("Le Faucon Romain", [255, 0, 255], "option10b.wav")
+option10c = Option("La Chouette Grecque", [255, 255, 0], "option10c.wav")
+tableau10a = QuestionQCM("Quel oiseau est au dessus de SPQR ?",[option10a, option10b, option10c], 1, "tableau10a.wav")
 
 option10d = Option("Sumus pridque romanus", [0, 255, 255], "")
 option10e = Option("Senatus polus romanus", [255, 0, 255], "")
@@ -39,7 +39,7 @@ option13b = Option("Demi-Deesse", [255, 255, 0], "")
 tableau13 = QuestionQCM("Enee etait un demi-dieu ou une demi-deesse ?",[option13a, option13b], 1)
 
 #La Danse
-tableau14 = QuestionAssist("Trouver les deux etoiles de David", (100, 20, 100), 6, 3)
+tableau14 = QuestionAssist("Trouver les deux etoiles de David", (100, 20, 100), 6, 3, "tableau14.wav")
 #Réponse : dans l'arbre
 
 #La Formation de l'Homme par Prométhée aidé du secours de Minerve
