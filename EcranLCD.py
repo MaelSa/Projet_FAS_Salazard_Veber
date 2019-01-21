@@ -124,7 +124,7 @@ def afficherLCD(text, rgb=[0,255,0],  nbrOption = 0, son = "", ignorer=[False,Fa
             i+=1
             pot, bouton1, bouton2 = action(2, nbrOption, ignorer)
     if sound_played:
-        son.stop()
+        sound.stop()
 
     return pot,bouton1,bouton2
 
