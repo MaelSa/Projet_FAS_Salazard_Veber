@@ -59,6 +59,7 @@ def action(temps, nbrOption=0, ignorer=[False,False]):
 def afficherLCD(text, rgb=[0,255,0],  nbrOption = 0, son = "", ignorer=[False,False]):
     print(son)
 
+
 #    Données :
 #    text (Chaine de caractères) que l'on souhaite afficher sur lécran lcd
 
@@ -72,6 +73,7 @@ def afficherLCD(text, rgb=[0,255,0],  nbrOption = 0, son = "", ignorer=[False,Fa
 #    Affiche le texte sur l'écran LCD
 #    Lorsque l'utilisateur agit sur un bouton/potentiomètre actif, alors la fonction prend fin et renvoie des informations sur l'action
     if son != "":
+        pygame.init()
         sound = pygame.mixer.Sound(son)
 
     ### Initialise la couleur de fond
