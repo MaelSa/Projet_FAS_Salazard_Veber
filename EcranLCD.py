@@ -57,7 +57,6 @@ def action(temps, nbrOption=0, ignorer=[False,False]):
 
 ##### AFFICHER : Print sur écran #####
 def afficherLCD(text, rgb=[0,255,0],  nbrOption = 0, son = "", ignorer=[False,False]):
-    print(son)
 
 
 #    Données :
@@ -136,9 +135,7 @@ def menu_options(Options):
     	num_current_option = len(Options) - 1
     quit = False
     while not quit:
-        print(num_current_option)
         action_potentiometre, action_bouton1, action_bouton2 = afficherLCD(Options[num_current_option].name, Options[num_current_option].color, len(Options), Options[num_current_option].sound)
-        #print(action_potentiometre)
 
         if action_potentiometre == 1 and num_current_option < len(Options) - 1:
             num_current_option += 1

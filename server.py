@@ -5,7 +5,6 @@ socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 socket.bind(('', 8888))
 finfin = False
 c = 0
-print("ok")
 while not finfin:
         socket.listen(5)
         print("Serveur lancé")

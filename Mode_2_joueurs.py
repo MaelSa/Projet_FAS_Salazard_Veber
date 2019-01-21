@@ -10,7 +10,7 @@ hote = "192.168.1.53"
 port = 8888
 
 def executer_mode_2():
-
+    #Comme le joueur 1, seule change la fonction d'éxecution des quizz
     changer_mode = False
     while not changer_mode:
         print("on entre dans le menu des quizz")

@@ -29,11 +29,13 @@ class Quiz:
             print("réponse donnée", answer)
 
             if answer == -1:
+                #Appui du bouton 2, donc retour en arrièr edans les menus
                 score = -1
                 retour_selection_quiz = True
                 afficherLCD("Retour au choix des quizz", [0, 100, 50])
                 time.sleep(1)
             elif answer:
+                #Bonne réponse
                 score += 1
                 #On allume led verte brièvement, else on allume led rouge brièvement (si la réponse est fausse
                 digitalWrite(led_bleue, 1)
@@ -51,6 +53,7 @@ class Quiz:
         return score
 
     def executer_quiz_mode_2_joueurs(self):
+        #Même chose que pour l'execution à 1 joueur, mais avec envoi des informations au serveur grâce au socket
         import socket
         hote = "192.168.1.53"
         port = 8888
@@ -67,6 +70,7 @@ class Quiz:
             print("réponse donnée", answer)
 
             if answer == -1:
+                #Réponse signifiant un appui sur le bouton2,donc retour en arrière
                 score = -1
                 retour_selection_quiz = True
                 afficherLCD("Retour au choix des quizz", [0, 100, 50])
@@ -75,6 +79,7 @@ class Quiz:
                 socket.send(stringsend)
                 time.sleep(1)
             elif answer:
+                #La réponse correspond à la bonne réponse
                 score += 1
                 # On allume led verte brièvement, else on allume led rouge brièvement (si la réponse est fausse
                 digitalWrite(led_bleue, 1)

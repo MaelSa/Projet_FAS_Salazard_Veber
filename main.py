@@ -20,12 +20,13 @@ Mode_1_joueur = Option("Mode 1 joueur", [0,50,50], "")
 Mode_2_joueurs = Option("Mode 2 joueurs", [0,255,0], "")
 fin_de_programme = False
 while not fin_de_programme:
+    #Partie principale du programme
     Option_choisie = menu_options([Mode_1_joueur, Mode_2_joueurs])
-    print("L'option choisie est ", Option_choisie)
+    #On choisit le mode de jeu
     if Option_choisie == 1: #On lance le mode 1 joueur
         changer_mode = False
         while not changer_mode:
-            print("on entre dans le menu des quizz")
+            #On entre dans la boucle dédiée aux quizz 1 joueur
             for i in range(2):
                 digitalWrite(led_rouge, 1)
                 digitalWrite(led_bleue, 1)
@@ -41,6 +42,7 @@ while not fin_de_programme:
             quiz_choisi = menu_options([choix_quiz1, choix_quiz2, choix_quiz3])
             print("le quizz choisi est ", quiz_choisi)
             if quiz_choisi == 1:
+                #Choix du premier quizz
                 for i in range(2):
                     digitalWrite(led_rouge, 1)
                     digitalWrite(led_bleue, 1)
