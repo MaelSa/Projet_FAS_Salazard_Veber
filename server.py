@@ -1,4 +1,4 @@
-
+# Serveur sur l'ordinateur
 import socket
 import time
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
