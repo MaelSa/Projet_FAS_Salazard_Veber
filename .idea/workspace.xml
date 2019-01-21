@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69a8aeaf-b244-4f2e-abbb-81d1a88a485c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/EcranLCD.py" beforeDir="false" afterPath="$PROJECT_DIR$/EcranLCD.py" afterDir="false" />
-    </list>
+    <list default="true" id="69a8aeaf-b244-4f2e-abbb-81d1a88a485c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +42,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.28199565">
+    <splitter split-orientation="vertical" split-proportion="0.808026">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -83,8 +81,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Instances_classes.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="24">
-                  <caret line="28" column="65" lean-forward="true" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
+                <state relative-caret-position="819">
+                  <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
                   <folding>
                     <element signature="e#0#22#0" expanded="true" />
                   </folding>
@@ -153,7 +151,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/EcranLCD.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
+                <state relative-caret-position="40">
                   <caret line="126" column="13" selection-start-line="126" selection-start-column="13" selection-end-line="126" selection-end-column="13" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
@@ -228,9 +226,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="114" />
-    <option name="y" value="-18" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-215" />
+    <option name="y" value="351" />
     <option name="width" value="1612" />
     <option name="height" value="867" />
   </component>
@@ -434,8 +432,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Question.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+        <state relative-caret-position="693">
+          <caret line="84" column="26" lean-forward="true" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -459,22 +457,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Instances_classes.py">
+    <entry file="file://$PROJECT_DIR$/EcranLCD.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="28" column="65" lean-forward="true" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
+        <state relative-caret-position="529">
+          <caret line="88" column="17" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
           <folding>
-            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EcranLCD.py">
+    <entry file="file://$PROJECT_DIR$/Instances_classes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="126" column="13" selection-start-line="126" selection-start-column="13" selection-end-line="126" selection-end-column="13" />
+        <state relative-caret-position="819">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
