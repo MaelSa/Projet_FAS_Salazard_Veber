@@ -2,6 +2,7 @@
 from EcranLCD import *
 import time
 from grovepi import *
+from Question import *
 
 led_rouge = 4
 led_bleue = 7
@@ -25,8 +26,15 @@ class Quiz:
         i = 0
         retour_selection_quiz = False
         while i < len(self.questions) and not retour_selection_quiz:
+            if type(self.questions[i]) == QuestionQCM:
+                afficherLCD("faites defiler avec A1, choisissez avec B1", [0, 100, 50])
+            elif type(self.questions[i]) == QuestionAssist:
+                afficherLCD("Faites appel a un assistant pour repondre", [0, 100, 50])
+            elif type(self.questions[i]) == QuestionsINT:
+                afficherLCD("Faites defiler les nombres avec A1 et selectionnez avec B1", [0, 100, 50])
             answer = self.questions[i].executer_question()
             print("réponse donnée", answer)
+
 
             if answer == -1:
                 #Appui du bouton 2, donc retour en arrièr edans les menus
