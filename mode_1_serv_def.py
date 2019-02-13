@@ -37,7 +37,7 @@ def executer_mode_1j_serv(ip, num_client):
                 digitalWrite(led_rouge, 0)
                 digitalWrite(led_bleue, 0)
                 time.sleep(0.5)
-            score = quiz1.executer_mode_1_serv()
+            score = quiz1.executer_mode_1_serv(ip, port)
             if score == -1:
                 changer_mode = True
                 afficherLCD("Retour au choix du mode de jeu")
@@ -79,7 +79,7 @@ def executer_mode_1j_serv(ip, num_client):
                 digitalWrite(led_rouge, 0)
                 digitalWrite(led_bleue, 0)
                 time.sleep(0.5)
-            score = quiz3.executer_mode_1_serv()
+            score = quiz3.executer_mode_1_serv(ip, port)
             if score == -1:
                 changer_mode = True
                 afficherLCD("Retour au choix du mode de jeu")
