@@ -1,11 +1,13 @@
     #Main projet FASO rallye musée
+from EcranLCD import *
+from Options import *
+from Instances_classes import *
+from Mode_2_joueurs_func import *
+from mode_1_serv_def import *
+from mode_2_joueurs import *
+
 def main(num_client):
-    from EcranLCD import *
-    from Options import *
-    from Instances_classes import *
-    from Mode_2_joueurs_func import *
-    from mode_1_serv_def import *
-    from mode_2_joueurs import *
+
 
     import time
     led_rouge = 4
