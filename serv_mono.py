@@ -11,6 +11,7 @@ def serv_mono(port, ip):
     conn.listen(5)
 
     client, adress = conn.accept()
+    print("we're connected")
     t1 = time.time()
 
     while not end:
@@ -25,3 +26,5 @@ def serv_mono(port, ip):
 
     print("Score : ", score)
     print("Temps : ", temps)
+
+serv_mono(5000)
