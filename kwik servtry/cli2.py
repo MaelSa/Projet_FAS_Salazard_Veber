@@ -22,5 +22,3 @@ def client2():
         if recev == "False":
             print("LA REPONSE EST FAUSSE")
         print(recev)
-
-client2()

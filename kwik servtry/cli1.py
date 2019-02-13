@@ -1,7 +1,8 @@
 def client1():
     import socket
     import time
-    hote = "localhost"
+    from grovepi import *
+    hote = "192.168.1.53"
     port = 12800
 
     ledr = False
@@ -18,7 +19,9 @@ def client1():
         recev = connexion_avec_serveur.recv(255).decode()
         if recev == "True":
             print("LA REPONSE EST BONNE")
+            digitalWrite(4,1)
+            time.sleep(1)
+            digitalWrite(4,0)
         if recev == "False":
             print("LA REPONSE EST FAUSSE")
         print(recev)
-client1()
