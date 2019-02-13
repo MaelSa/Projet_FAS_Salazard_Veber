@@ -113,7 +113,7 @@ class Quiz:
         socket.close()
         return score
 
-    def executer_mode_1_serv(self, ip, port)
+    def executer_mode_1_serv(self, ip, port):
         import socket
         hote = ip
         port = port
