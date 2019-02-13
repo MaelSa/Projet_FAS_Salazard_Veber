@@ -4,7 +4,7 @@ from Options import *
 from Instances_classes import *
 from Mode_2_joueurs_func import *
 from mode_1_serv_def import *
-from mode_2_joueurs import *
+from Mode_2_joueurs import *
 
 def main(num_client):
 
