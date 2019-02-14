@@ -3,6 +3,7 @@ from client_2j import *
 
 import threading
 def main_2j(num_client):
+    print("on lance le mode deux joueurs main2j")
     port = [12800, 5000]
     print("on commence")
     t1 = threading.Thread( target = client_2j, args = (port[num_client], "192.168.1.53", ) )
