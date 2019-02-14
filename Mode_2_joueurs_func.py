@@ -6,9 +6,12 @@ import time
 import socket
 
 
-def executer_mode_2():
+def executer_mode_2(num_client):
     #Comme le joueur 1, seule change la fonction d'éxecution des quizz
     changer_mode = False
+    ip = "192.168.1.53"
+    ports = [5000,12800]
+    port = ports[num_client]
     while not changer_mode:
         print("on entre dans le menu des quizz")
         for i in range(2):

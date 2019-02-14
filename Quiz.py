@@ -52,7 +52,7 @@ class Quiz:
             i += 1
         return score
 
-    def executer_quiz_mode_2_joueurs(self, ip, port):
+    def executer_quiz_mode_2_joueurs(self):
         #Même chose que pour l'execution à 1 joueur, mais avec envoi des informations au serveur grâce au socket
         global bonne_rep
         global sent_rep
@@ -60,11 +60,6 @@ class Quiz:
         bonne_rep = False
         sent_rep = False
 
-        import socket
-        hote = ip
-        port = port
-        socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        socket.connect((hote, port))
         print("Bienvenue dans le quizz")
         afficherLCD("Bienvenue dans le quiz")
         time.sleep(2)
@@ -80,9 +75,7 @@ class Quiz:
                 score = -1
                 retour_selection_quiz = True
                 afficherLCD("Retour au choix des quizz", [0, 100, 50])
-                string = "Retour au choix des quizz"
-                stringsend = string.encode()
-                socket.send(stringsend)
+
                 time.sleep(1)
             elif answer:
                 bonne_rep = True
@@ -94,23 +87,17 @@ class Quiz:
                 afficherLCD("Reponse juste !", [0, 255, 0])
                 time.sleep(1)
                 string = "Reponse juste"
-                stringsend = string.encode()
-                socket.send(stringsend)
+
                 digitalWrite(led_bleue, 0)
 
             else:
                 digitalWrite(led_rouge, 1)
                 afficherLCD("Reponse fausse !", [255, 0, 0])
-                string = "Reponse fausse"
-                stringsend = string.encode()
-                socket.send(stringsend)
+
                 time.sleep(1)
                 digitalWrite(led_rouge, 0)
             i += 1
-        string =  + str(score)
-        stringsend = str(score).encode()
-        socket.send(stringsend)
-        socket.close()
+
         return score
 
     def executer_mode_1_serv(self, ip, port):
