@@ -26,7 +26,8 @@ def serv_j1(port):
 
     while not end:
         received = client.recv(255).decode()
-        print(received)
+        if received != "False":
+            print(received)
         if received == "True":
             received1 = True
             takecount1 = False
@@ -65,7 +66,9 @@ def serv_j2(port):
 
     while not end:
         received = client.recv(255).decode()
-        print(received)
+        if received != "False":
+            print(received)
+        
         if received == "True":
             received2 = True
             takecount2 = False

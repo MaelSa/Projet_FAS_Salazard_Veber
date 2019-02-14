@@ -10,6 +10,7 @@ def client_2j(port, ip):
     connexion_avec_serveur.connect((hote, port))
     end = False
     while not end:
+        print("we got it")
         if bonne_rep:
             connexion_avec_serveur.send("True".encode())
             bonne_rep = False
