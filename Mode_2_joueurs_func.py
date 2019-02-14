@@ -27,7 +27,9 @@ def executer_mode_2(num_client):
         choix_quiz2 = Option("Quiz2", [0, 255, 0], "")
         choix_quiz3 = Option("Quiz3", [0, 0, 255], "")
         time.sleep(1)
+        print("on rentre dans le menu")
         quiz_choisi = menu_options([choix_quiz1, choix_quiz2, choix_quiz3])
+        print("on sort du menu")
         print("le quizz choisi est ", quiz_choisi)
 
         if quiz_choisi == 1:
