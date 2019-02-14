@@ -30,7 +30,7 @@ def executer_mode_2(num_client):
         print("on rentre dans le menu")
         quiz_choisi = menu_options([choix_quiz1, choix_quiz2, choix_quiz3])
         print("on sort du menu")
-        print("le quizz choisi est ", quiz_choisi)
+        #print("le quizz choisi est ", quiz_choisi)
 
         if quiz_choisi == 1:
             for i in range(2):
