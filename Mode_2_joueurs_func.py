@@ -96,4 +96,3 @@ def executer_mode_2(num_client):
 
         elif quiz_choisi == 0:
             changer_mode = True
-executer_mode_2(0)
