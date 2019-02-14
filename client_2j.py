@@ -1,6 +1,7 @@
+import socket
+import time
 def client_2j(port, ip):
-    import socket
-    import time
+
     hote = ip
     port = port
 
@@ -22,4 +23,4 @@ def client_2j(port, ip):
         if recev == "True":
             digitalWrite(4,1)
             time.sleep(1)
-            digitalWrite(4,0)   
+            digitalWrite(4,0)
