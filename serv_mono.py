@@ -13,12 +13,14 @@ def serv_mono(port, ip):
     client, adress = conn.accept()
     print("we're connected")
     t1 = time.time()
-
+    end = False
+    
     while not end:
         received = client.recv(255).decode()
         print(received)
         num = ["0","1","2","3","4","5","6","7","8","9"]
         if received[0] in num:
+            print("it happened guys")
             t2 = time.time()
             score = int(received)
             temps = t2 - t1
@@ -27,4 +29,7 @@ def serv_mono(port, ip):
     print("Score : ", score)
     print("Temps : ", temps)
 
-serv_mono(5000)
+    while 1:
+        a = input("finished")
+
+serv_mono(5000, '')
