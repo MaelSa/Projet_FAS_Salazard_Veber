@@ -28,7 +28,7 @@ def main(num_client):
     fin_de_programme = False
     while not fin_de_programme:
         #Partie principale du programme
-        Option_choisie = menu_options([Mode_1_joueur, Mode_2_joueurs, Mode_1_serv])
+        Option_choisie = menu_options([Mode_1_joueur, Mode_2_joueurs])
         #On choisit le mode de jeu
         if Option_choisie == 1: #On lance le mode 1 joueur
             changer_mode = False
@@ -120,6 +120,6 @@ def main(num_client):
             print("on exectute mode 2")
             main_2j(num_client)
 
-        #elif Option_choisie == 3: #On lance le mode 1 joueur conn au serv
+        #elif Option_choisie == 3: #On  lance le mode 1 joueur conn au serv
             #executer_mode_1j_serv("192.168.1.53", num_client)
 main(1)
