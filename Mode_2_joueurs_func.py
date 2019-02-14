@@ -14,7 +14,7 @@ def executer_mode_2(num_client):
     ports = [5000,12800]
     port = ports[num_client]
     while not changer_mode:
-        #On entre dans la boucle dédiée aux quizz 1 joueur
+        print("on entre dans le menu des quizz")
         for i in range(2):
             digitalWrite(led_rouge, 1)
             digitalWrite(led_bleue, 1)
@@ -27,10 +27,8 @@ def executer_mode_2(num_client):
         choix_quiz2 = Option("Quiz2", [0, 255, 0], "")
         choix_quiz3 = Option("Quiz3", [0, 0, 255], "")
         time.sleep(1)
-        print("on rentre dans le menu")
         quiz_choisi = menu_options([choix_quiz1, choix_quiz2, choix_quiz3])
-        print("on sort du menu")
-        #print("le quizz choisi est ", quiz_choisi)
+        print("le quizz choisi est ", quiz_choisi)
 
         if quiz_choisi == 1:
             for i in range(2):
@@ -40,7 +38,7 @@ def executer_mode_2(num_client):
                 digitalWrite(led_rouge, 0)
                 digitalWrite(led_bleue, 0)
                 time.sleep(0.5)
-            score = quiz1.executer_quiz_mode_2_joueurs()
+            score = quiz1.executer_mode_1_serv(ip, port)
             if score == -1:
                 changer_mode = True
                 afficherLCD("Retour au choix du mode de jeu")
@@ -61,7 +59,7 @@ def executer_mode_2(num_client):
                 digitalWrite(led_rouge, 0)
                 digitalWrite(led_bleue, 0)
                 time.sleep(0.5)
-            score = quiz2.executer_quiz_mode_2_joueurs()
+            score = quiz2.executer_mode_1_serv(ip, port)
             if score == -1:
                 changer_mode = True
                 afficherLCD("Retour au choix du mode de jeu")
@@ -82,8 +80,7 @@ def executer_mode_2(num_client):
                 digitalWrite(led_rouge, 0)
                 digitalWrite(led_bleue, 0)
                 time.sleep(0.5)
-            print("on va executer en mode deux joueurs le quizz3")
-            score = quiz3.executer_quiz_mode_2_joueurs()
+            score = quiz3.executer_mode_1_serv(ip, port)
             if score == -1:
                 changer_mode = True
                 afficherLCD("Retour au choix du mode de jeu")
