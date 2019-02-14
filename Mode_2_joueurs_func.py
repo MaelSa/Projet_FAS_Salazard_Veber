@@ -28,7 +28,7 @@ def executer_mode_2(num_client):
         choix_quiz3 = Option("Quiz3", [0, 0, 255], "")
         time.sleep(1)
         quiz_choisi = menu_options([choix_quiz1, choix_quiz2, choix_quiz3])
-        #print("le quizz choisi est ", quiz_choisi)
+        print("le quizz choisi est ", quiz_choisi)
 
         if quiz_choisi == 1:
             for i in range(2):
