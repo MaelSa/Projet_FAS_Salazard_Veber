@@ -3,6 +3,8 @@ from client_2j import *
 
 import threading
 def main_2j(num_client):
+    global 2j
+    2j = False
     print("on lance le mode deux joueurs main2j")
     port = [12800, 5000]
     print("on commence")
