@@ -12,3 +12,5 @@ def main_2j(num_client):
     t2 = threading.Thread( target  = executer_mode_2, args = (num_client, ) )
     t2.start()
     print("second thread")
+
+main_2j(0)
