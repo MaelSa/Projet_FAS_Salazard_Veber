@@ -8,6 +8,7 @@ import socket
 
 
 def executer_mode_1j_serv(ip, num_client):
+    print("what we do is one mod serv")
     ports = [5000,12800]
     port = ports[num_client]
     #Comme le joueur 1, seule change la fonction d'éxecution des quizz
