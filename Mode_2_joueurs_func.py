@@ -14,7 +14,7 @@ def executer_mode_2(num_client):
     ports = [5000,12800]
     port = ports[num_client]
     while not changer_mode:
-        print("on entre dans le menu des quizz")
+        #On entre dans la boucle dédiée aux quizz 1 joueur
         for i in range(2):
             digitalWrite(led_rouge, 1)
             digitalWrite(led_bleue, 1)
