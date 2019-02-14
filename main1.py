@@ -117,7 +117,9 @@ def main(num_client):
 
 
         elif Option_choisie == 2: #On lance le mode 2 joueurs
+            time.sleep(0.5)
             print("on exectute mode 2")
+
             main_2j(num_client)
 
         #elif Option_choisie == 3: #On lance le mode 1 joueur conn au serv
