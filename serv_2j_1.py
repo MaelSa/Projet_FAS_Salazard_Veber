@@ -1,9 +1,8 @@
 import socket
 import time
 
-def serv_j1(port, ip):
+def serv_j1(port):
     print("ON LANCE LE SEEEERVEUUUUUR")
-    hote = ip
     port = port
     global received1
     global received2
@@ -16,7 +15,7 @@ def serv_j1(port, ip):
     takecount2 = True
 
     conn = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    conn.bind((hote, port))
+    conn.bind(('', 5000))
     conn.listen(5)
 
     client, adress = conn.accept()
@@ -40,9 +39,9 @@ def serv_j1(port, ip):
 
 
 
-def serv_j2(port, ip):
+def serv_j2(port):
     print("ON LANCE LE SEEEERVEUUUUUR")
-    hote = ip
+
     port = port
     global received1
     global received2
@@ -55,9 +54,9 @@ def serv_j2(port, ip):
     takecount2 = True
 
     conn = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    conn.bind((hote, port))
+    conn.bind(('', 12800))
     conn.listen(5)
-
+    print("att")
     client, adress = conn.accept()
     print("wewconnect")
     end = False
