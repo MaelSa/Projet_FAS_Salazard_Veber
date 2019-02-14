@@ -28,7 +28,7 @@ def main(num_client):
     fin_de_programme = False
     while not fin_de_programme:
         #Partie principale du programme
-        Option_choisie = menu_options([Mode_1_joueur, Mode_2_joueurs, Mode_1_serv])
+        Option_choisie = menu_options([Mode_1_joueur, Mode_2_joueurs])
         #On choisit le mode de jeu
         if Option_choisie == 1: #On lance le mode 1 joueur
             changer_mode = False
