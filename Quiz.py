@@ -69,7 +69,8 @@ class Quiz:
         while i < len(self.questions) and not retour_selection_quiz:
             answer = self.questions[i].executer_question()
             print("réponse donnée", answer)
-
+            if answer:
+                print("gotit")
             if answer == -1:
                 #Réponse signifiant un appui sur le bouton2,donc retour en arrière
                 score = -1
