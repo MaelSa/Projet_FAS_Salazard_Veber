@@ -3,9 +3,9 @@ from client_2j import *
 
 import threading
 def main_2j(num_client):
-    joueur : global
+    global globvar
 
-    joueur = False
+    globvar = False
     print("on lance le mode deux joueurs main2j")
     port = [12800, 5000]
     print("on commence")
@@ -13,7 +13,7 @@ def main_2j(num_client):
     #t1.start()
     print("premier thread")
     t2 = threading.Thread( target  = executer_mode_2, args = (num_client, ) )
-    if not joueur:
+    if not globvar:
 
         t2.start()
     print("second thread")

@@ -7,9 +7,9 @@ import socket
 
 
 def executer_mode_2(num_client):
-    joueur : global
+    global globvar
     if not joueur:
-        joueur = True
+        globvar = True
         #Comme le joueur 1, seule change la fonction d'éxecution des quizz
         print('On lance le bon mode dexecution jesp')
         changer_mode = False
