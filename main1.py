@@ -122,6 +122,6 @@ def main(num_client):
 
             main_2j(num_client)
 
-        #elif Option_choisie == 3: #On lance le mode 1 joueur conn au serv
-            #executer_mode_1j_serv("192.168.1.53", num_client)
+        elif Option_choisie == 3: #On lance le mode 1 joueur conn au serv
+            executer_mode_1j_serv("192.168.43.131", num_client)
 main(0)

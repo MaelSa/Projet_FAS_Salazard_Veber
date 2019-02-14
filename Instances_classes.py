@@ -90,6 +90,7 @@ tableau28 = QuestionsINT("Combien de charrues ?", 6, 0, 10, '')
 
 
 # QUIZ
-quiz1 = Quiz([tableau14, tableau10a, tableau15, tableau1, tableau3], "Debut du quiz 1", "Fin du quiz 1 !", 2)
-quiz2 = Quiz([tableau12, tableau14, tableau11, tableau13, tableau10a], "Debut du quiz 2", "Fin du quiz 2 !", 2)
-quiz3 = Quiz([tableau13, tableau15, tableau10b, tableau1, tableau12], "Debut du quiz 3", "Fin du quiz 3 !", 2)
+quiz1 = Quiz([tableau1, tableau3, tableau10a, tableau11, tableau12], "Debut du quiz 1", "Fin du quiz 1 !", 2)
+quiz2 = Quiz([tableau10b, tableau13, tableau14, tableau15, tableau18], "Debut du quiz 2", "Fin du quiz 2 !", 2)
+quiz3 = Quiz([tableau19, tableau21, tableau22, tableau24, tableau25a], "Debut du quiz 3", "Fin du quiz 3 !", 2)
+quiz4 = Quiz([tableau25b, tableau27, tableau28, tableau13, tableau12],"Debut du quiz", "Fin du quiz ", 2)
