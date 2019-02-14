@@ -9,9 +9,11 @@ def client_2j(port, ip):
     connexion_avec_serveur = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     connexion_avec_serveur.connect((hote, port))
     end = False
+    print("we got connected but")
     while not end:
         print("we got it")
         if bonne_rep:
+            print("there's a good rep")
             connexion_avec_serveur.send("True".encode())
             bonne_rep = False
         else:
