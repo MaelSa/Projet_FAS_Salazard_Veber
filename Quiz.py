@@ -69,6 +69,7 @@ class Quiz:
         while i < len(self.questions) and not retour_selection_quiz:
             answer = self.questions[i].executer_question()
             print("réponse donnée", answer)
+            print(str(type(answer)))
             if answer == "True":
                 print("gotit")
             if answer == -1:
@@ -79,7 +80,7 @@ class Quiz:
 
                 time.sleep(1)
             elif answer:
-                print("LA REPONSE EST BONNE GROS")
+                print("LA REPONSE EST BONNE")
                 bonne_rep = True
                 sent_rep = False
                 #La réponse correspond à la bonne réponse
