@@ -1,7 +1,6 @@
 from Question import *
 from Quiz import *
 from Options import *
-# A insérer à la ligne 7 de Instances_classes.py
 
 #Alexandre consulte l'oracle d'Apollon
 tableau1 = QuestionAssist("Trouver le serpent", (100, 20, 100), 2, 5, 'tableau1.wav')
@@ -46,9 +45,51 @@ tableau14 = QuestionAssist("Trouver les deux etoiles de David", (100, 20, 100), 
 tableau15 = QuestionsINT("Combien d’animaux ?", 5, 0, 10, 'tableau15.wav')
 
 
+### NEW QUESTIONS
+
+#Le baptême du Christ
+tableau18 = QuestionAssist("Trouver l'epee", (100, 20, 100), 6, 3, "")
+#Réponse : Cachée sous le casque
+
+#Le Retour de la chasse
+tableau19 = QuestionsINT("Combien d’animaux ?", 8, 0, 10, 'tableau15.wav')
+
+#Pygmalion amoureux de sa statue
+tableau21 = QuestionAssist("Ou est Pygmalion ?", (100, 20, 100), 6, 3, "")
+#Réponse : Homme habillé
+
+#Saint Jean-Baptiste
+option22a = Option("Jean-Baptiste apotre de Dieu", [0, 255, 255], "")
+option22b = Option("Jean-Baptiste fils de Dieu", [255, 255, 0], "")
+option22c = Option("Voici l'agneau de Dieu", [255, 255, 0], "")
+tableau22 = QuestionQCM("Que veut dire Ecce Agnus Dei ?",[option22a, option22b, option22c], 3)
+
+#Ulysse sauvé du naufrage par Minerve, aborde à l'ile de Calypso
+tableau24 = QuestionAssist("Trouver Minerve ?", (100, 20, 100), 6, 3, "")
+#Réponse : Femme en bleu
+
+#Vénus demande à Vulcain des armes pour son fils Enée
+option25a = Option("Des enfers et du feu", [0, 255, 255], "")
+option25b = Option("Du fer et du feu", [255, 255, 0], "")
+option25c = Option("Des volcans et du feu", [255, 255, 0], "")
+tableau25a = QuestionQCM("Vulcain etait le Dieu de...",[option25a, option25b, option25c], 2)
+
+option25d = Option("Hades", [0, 255, 255], "")
+option25e = Option("Ares", [255, 255, 0], "")
+option25f = Option("Hephaistos", [255, 255, 0], "")
+tableau25b = QuestionQCM("Quel equivalent grec pour Vulcain ?",[option25d, option25e, option25f], 3)
+
+#Vue de la ville d'Elburg, sur le Zuyderzee
+option27a = Option("Blanc", [0, 255, 255], "")
+option27b = Option("Jaune", [255, 255, 0], "")
+option27c = Option("Marron", [255, 255, 0], "")
+tableau27 = QuestionQCM("Couleur du moulin a vent :",[option27a, option27b, option27c], 1)
+
+#Vue de la ville de Grave-sur-Meuse, dans les Pays-Bas
+tableau28 = QuestionsINT("Combien de charrues ?", 6, 0, 10, '')
+
+
 # QUIZ
 quiz1 = Quiz([tableau14, tableau10a, tableau15, tableau1, tableau3], "Debut du quiz 1", "Fin du quiz 1 !", 2)
 quiz2 = Quiz([tableau12, tableau14, tableau11, tableau13, tableau10a], "Debut du quiz 2", "Fin du quiz 2 !", 2)
 quiz3 = Quiz([tableau13, tableau15, tableau10b, tableau1, tableau12], "Debut du quiz 3", "Fin du quiz 3 !", 2)
-
-# la suite une autre fois car flemme !
