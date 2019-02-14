@@ -80,6 +80,7 @@ def executer_mode_2(num_client):
                 digitalWrite(led_rouge, 0)
                 digitalWrite(led_bleue, 0)
                 time.sleep(0.5)
+            print("on va executer en mode deux joueurs le quizz3")
             score = quiz3.executer_quiz_mode_2_joueurs()
             if score == -1:
                 changer_mode = True
