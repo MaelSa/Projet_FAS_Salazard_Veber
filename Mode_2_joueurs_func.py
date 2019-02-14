@@ -8,6 +8,7 @@ import socket
 
 def executer_mode_2(num_client):
     #Comme le joueur 1, seule change la fonction d'éxecution des quizz
+    print('On lance le bon mode dexecution jesp')
     changer_mode = False
     ip = "192.168.1.53"
     ports = [5000,12800]
