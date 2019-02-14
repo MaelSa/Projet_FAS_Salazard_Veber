@@ -4,8 +4,7 @@ def client_2j(port, ip):
     hote = ip
     port = port
 
-    global bonne_rep
-
+    global bonne_rep = False
     connexion_avec_serveur = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     connexion_avec_serveur.connect((hote, port))
     end = False
