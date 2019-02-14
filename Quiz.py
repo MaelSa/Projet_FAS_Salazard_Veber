@@ -62,6 +62,7 @@ class Quiz:
 
         print("Bienvenue dans le quizz")
         afficherLCD("Bienvenue dans le quiz")
+        print("je pense que c'est le bon mode")
         time.sleep(2)
         score = 0
         i = 0
