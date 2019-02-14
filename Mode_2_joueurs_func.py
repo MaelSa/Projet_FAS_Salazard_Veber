@@ -28,7 +28,7 @@ def executer_mode_2(num_client):
         choix_quiz3 = Option("Quiz3", [0, 0, 255], "")
         time.sleep(1)
         quiz_choisi = menu_options([choix_quiz1, choix_quiz2, choix_quiz3])
-        print("le quizz choisi est ", quiz_choisi)
+        #print("le quizz choisi est ", quiz_choisi)
 
         if quiz_choisi == 1:
             for i in range(2):
@@ -38,7 +38,7 @@ def executer_mode_2(num_client):
                 digitalWrite(led_rouge, 0)
                 digitalWrite(led_bleue, 0)
                 time.sleep(0.5)
-            score = quiz1.executer_mode_1_serv(ip, port)
+            score = quiz1.executer_quiz_mode_2_joueurs()
             if score == -1:
                 changer_mode = True
                 afficherLCD("Retour au choix du mode de jeu")
@@ -59,7 +59,7 @@ def executer_mode_2(num_client):
                 digitalWrite(led_rouge, 0)
                 digitalWrite(led_bleue, 0)
                 time.sleep(0.5)
-            score = quiz2.executer_mode_1_serv(ip, port)
+            score = quiz2.executer_quiz_mode_2_joueurs()
             if score == -1:
                 changer_mode = True
                 afficherLCD("Retour au choix du mode de jeu")
@@ -80,7 +80,7 @@ def executer_mode_2(num_client):
                 digitalWrite(led_rouge, 0)
                 digitalWrite(led_bleue, 0)
                 time.sleep(0.5)
-            score = quiz3.executer_mode_1_serv(ip, port)
+            score = quiz3.executer_quiz_mode_2_joueurs()
             if score == -1:
                 changer_mode = True
                 afficherLCD("Retour au choix du mode de jeu")
