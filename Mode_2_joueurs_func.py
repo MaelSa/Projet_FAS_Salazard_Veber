@@ -7,7 +7,7 @@ import socket
 
 
 def executer_mode_2(num_client):
-    global joueur
+    joueur : global
     if not joueur:
         joueur = True
         #Comme le joueur 1, seule change la fonction d'éxecution des quizz

@@ -3,7 +3,7 @@ from client_2j import *
 
 import threading
 def main_2j(num_client):
-    global joueur
+    joueur : global
 
     joueur = False
     print("on lance le mode deux joueurs main2j")
