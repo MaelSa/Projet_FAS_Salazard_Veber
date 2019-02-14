@@ -78,6 +78,7 @@ class Quiz:
 
                 time.sleep(1)
             elif answer:
+                print("LA REPONSE EST BONNE GROS")
                 bonne_rep = True
                 sent_rep = False
                 #La réponse correspond à la bonne réponse
