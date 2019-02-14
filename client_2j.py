@@ -11,7 +11,7 @@ def client_2j(port, ip):
     end = False
     print("we got connected but")
     while not end:
-        print("we got it")
+        
         if bonne_rep:
             print("there's a good rep")
             connexion_avec_serveur.send("True".encode())
